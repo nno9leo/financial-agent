@@ -1,0 +1,6 @@
+{
+  "tool_calls": [
+    {"name": "list_filings", "args": {"company": "MSFT", "form": "10-K", "date_from": "2026-07-29", "date_to": "2026-07-29"}}
+  ],
+  "final_assistant_text": "Accession number 0001193125-26-323660, filed 2026-07-29."
+}

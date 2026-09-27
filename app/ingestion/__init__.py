@@ -1,0 +1,1 @@
+"""SEC data ingestion."""

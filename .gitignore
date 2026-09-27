@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Secrets
+.env
+
+# Data: manifests committed, raw/normalized caches not
+data/raw/
+data/normalized/
+
+# Artifacts: traces ignored; eval summaries/failures committed
+artifacts/traces/
+
+# Node / Pi extension
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+data/models/
+# stray session files from tools that treat ":memory:" as a path
+:memory:*
+# generated research reports and drafts (local outputs)
+artifacts/reports/

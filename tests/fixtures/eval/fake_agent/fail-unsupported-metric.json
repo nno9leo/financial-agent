@@ -1,0 +1,6 @@
+{
+  "tool_calls": [
+    {"name": "calculate_financial_metric", "args": {"metric": "gross_margin", "company": "MSFT", "fiscal_year": 2026}}
+  ],
+  "final_assistant_text": "Gross margin is not a supported calculator metric."
+}

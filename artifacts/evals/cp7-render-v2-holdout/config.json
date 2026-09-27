@@ -1,0 +1,13 @@
+{
+  "dataset_version": "v1",
+  "dataset_sha256": "121d669d3e86a0f23555cc7a9079c49dac74bf99147a334213bae0bcfdb8b3a4",
+  "split": "holdout",
+  "top_k": 5,
+  "max_verify_attempts": 2,
+  "derived_metric_render": "v2",
+  "per_item_timeout_s": 300,
+  "max_tool_calls_per_item": 30,
+  "prompt_guidance_sha256": "f1f6d03bf882cda5dc90cda971a76408176acf32c853bc71266b5c62354dd4ce",
+  "agent": "pi",
+  "allow_dirty": false
+}

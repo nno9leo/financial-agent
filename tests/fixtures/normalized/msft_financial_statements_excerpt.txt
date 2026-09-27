@@ -1,0 +1,31 @@
+ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA
+INCOME STATEMENTS
+(In millions, except per share amounts)
+Year Ended June 30, | 2026 | 2025 | 2024
+Revenue:
+Product | $ 64,696 | $ 63,946 | $ 64,773
+Service and other | 267,143 | 217,778 | 180,349
+Total revenue | 331,839 | 281,724 | 245,122
+Cost of revenue:
+Product | 12,098 | 13,501 | 15,272
+Service and other | 94,276 | 74,330 | 58,842
+Total cost of revenue | 106,374 | 87,831 | 74,114
+Gross margin | 225,465 | 193,893 | 171,008
+Research and development | 35,562 | 32,488 | 29,510
+Sales and marketing | 26,710 | 25,654 | 24,456
+General and administrative | 7,956 | 7,223 | 7,609
+Operating income | 155,237 | 128,528 | 109,433
+Other income (expense), net | 10,697 | (4,901) | (1,646)
+Income before income taxes | 165,934 | 123,627 | 107,787
+Provision for income taxes | 32,185 | 21,795 | 19,651
+Net income | $ 133,749 | $ 101,832 | $ 88,136
+Earnings per share:
+Basic | $ 18.00 | $ 13.70 | $ 11.86
+Diluted | $ 17.95 | $ 13.64 | $ 11.80
+Weighted average shares outstanding:
+Basic | 7,429 | 7,433 | 7,431
+Diluted | 7,453 | 7,465 | 7,469
+Refer to accompanying notes.
+COMPREHENSIVE INCOME STATEMENTS
+(In millions)
+Year Ended June 30, | 2026 | 2025 | 20

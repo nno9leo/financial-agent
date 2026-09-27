@@ -1,0 +1,6 @@
+{
+  "tool_calls": [
+    {"name": "search_companies", "args": {"query": "NVDA"}}
+  ],
+  "final_assistant_text": "NVIDIA is outside the pinned corpus, so I cannot provide a revenue figure."
+}

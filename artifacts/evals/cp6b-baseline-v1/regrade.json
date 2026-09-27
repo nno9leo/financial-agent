@@ -1,0 +1,186 @@
+[
+  {
+    "changes": [
+      "G1: scaled numeric assertion matching",
+      "G2: refusal figures follow requested metric and calculator outputs",
+      "G3: expected_error_code fallback for refusal evidence",
+      "G4: separate run-level runtime errors from tool errors"
+    ],
+    "from": "v1",
+    "per_item_changes": [
+      {
+        "field": "error_categories",
+        "question_id": "aapl-nar-crit-est",
+        "v1": [
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "aapl-nar-iphone-driver",
+        "v1": [
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "aapl-nar-tariff-risk",
+        "v1": [
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "aapl-num-net_margin-2023",
+        "v1": [
+          "fact_selection",
+          "runtime_error",
+          "unsupported_claim"
+        ],
+        "v2": [
+          "fact_selection",
+          "tool_error",
+          "unsupported_claim"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "aapl-num-revenue-2024",
+        "v1": [
+          "fact_selection",
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "numeric_correct",
+        "question_id": "aapl-num-revenue-2024",
+        "v1": false,
+        "v2": true
+      },
+      {
+        "field": "error_categories",
+        "question_id": "aapl-num-revenue_growth_yoy-2023",
+        "v1": [
+          "refusal_missing",
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "refusal_correct",
+        "question_id": "aapl-num-revenue_growth_yoy-2023",
+        "v1": false,
+        "v2": true
+      },
+      {
+        "field": "error_categories",
+        "question_id": "fail-unavailable-year",
+        "v1": [
+          "refusal_missing",
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "refusal_correct",
+        "question_id": "fail-unavailable-year",
+        "v1": false,
+        "v2": true
+      },
+      {
+        "field": "error_categories",
+        "question_id": "msft-nar-ai-risk",
+        "v1": [
+          "runtime_error"
+        ],
+        "v2": [
+          "runtime_error",
+          "tool_error"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "msft-nar-mpc-decline",
+        "v1": [
+          "retrieval_miss",
+          "runtime_error"
+        ],
+        "v2": [
+          "retrieval_miss",
+          "tool_error"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "msft-nar-opinc-driver",
+        "v1": [
+          "runtime_error"
+        ],
+        "v2": [
+          "tool_error"
+        ]
+      },
+      {
+        "field": "error_categories",
+        "question_id": "msft-num-revenue_growth_yoy-2024",
+        "v1": [
+          "refusal_missing",
+          "runtime_error"
+        ],
+        "v2": []
+      },
+      {
+        "field": "refusal_correct",
+        "question_id": "msft-num-revenue_growth_yoy-2024",
+        "v1": false,
+        "v2": true
+      },
+      {
+        "field": "error_categories",
+        "question_id": "msft-num-revenue_growth_yoy-2026",
+        "v1": [
+          "fact_selection",
+          "runtime_error",
+          "unsupported_claim"
+        ],
+        "v2": [
+          "fact_selection",
+          "tool_error",
+          "unsupported_claim"
+        ]
+      }
+    ],
+    "regraded_at": "2026-09-26T18:54:51.883396+00:00",
+    "sha": "77cf832ba76defcce5b2a45599b476a1f4f79a8e",
+    "to": "v2"
+  },
+  {
+    "changes": [
+      "G1: scaled numeric assertion matching",
+      "G2: target-aware refusal figures under ADR 0011 rules 1-3",
+      "G3: expected_error_code fallback for refusal evidence",
+      "G4: separate run-level runtime errors from tool errors"
+    ],
+    "from": "v2",
+    "per_item_changes": [],
+    "regraded_at": "2026-09-27T00:24:41.494360+00:00",
+    "sha": "95792ca76a9da415d77922046de54f8f62440a7f",
+    "to": "v3"
+  }
+]

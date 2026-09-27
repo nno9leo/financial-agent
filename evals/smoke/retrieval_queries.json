@@ -1,0 +1,8 @@
+[
+  {"id": "msft-1", "company": "MSFT", "question": "What drove the growth in Intelligent Cloud revenue?", "expected_section": "mdna"},
+  {"id": "msft-2", "company": "MSFT", "question": "What risks does Microsoft describe related to developing and deploying AI?", "expected_section": "risk_factors"},
+  {"id": "msft-3", "company": "MSFT", "question": "How did operating income change in fiscal year 2026 and what drove the change?", "expected_section": "mdna"},
+  {"id": "aapl-1", "company": "AAPL", "question": "What factors affected iPhone net sales in fiscal 2025?", "expected_section": "mdna"},
+  {"id": "aapl-2", "company": "AAPL", "question": "How does Apple describe risks from tariffs, international trade, and supply chain concentration?", "expected_section": "risk_factors"},
+  {"id": "aapl-3", "company": "AAPL", "question": "What are Apple's critical accounting estimates?", "expected_section": "mdna"}
+]

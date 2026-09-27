@@ -1,0 +1,54 @@
+{
+  "authored_by": {
+    "handwritten_items.v1.jsonl": "Hand-authored; source entries preserved per item",
+    "numeric": "deterministic generator from cp3-groundtruth.json"
+  },
+  "counts_by_question_type": {
+    "comparison": 2,
+    "failure": 3,
+    "metadata": 1,
+    "mixed": 3,
+    "narrative": 8,
+    "numeric_failure": 2,
+    "numeric_lookup": 16
+  },
+  "counts_by_split": {
+    "dev": 23,
+    "holdout": 12
+  },
+  "counts_by_type_and_split": {
+    "dev": {
+      "comparison": 2,
+      "failure": 3,
+      "metadata": 1,
+      "mixed": 1,
+      "narrative": 6,
+      "numeric_failure": 1,
+      "numeric_lookup": 9
+    },
+    "holdout": {
+      "mixed": 2,
+      "narrative": 2,
+      "numeric_failure": 1,
+      "numeric_lookup": 7
+    }
+  },
+  "cutoff_policy": "facts/evidence must come from the pinned accession filed on/before cutoff_date",
+  "data_manifest": {
+    "path": "data/manifests/filings.v1.json",
+    "sha256": "f6194daabb216095e9f202c25ffe0def665f8a89bdfc7d9bea7eab81047db1bf",
+    "version": "v1"
+  },
+  "dataset_version": "v1",
+  "external_items": 0,
+  "external_items_note": "External benchmarks (e.g. FinanceBench/FinQA) are deferred: their filings are outside the pinned corpus.",
+  "ground_truth_source": {
+    "method": "read from 10-K statement text",
+    "path": "evals/ground_truth/statement_ground_truth.json",
+    "sha256": "0dba12f3a6cd92ff0de3859868efa278a159f56b41410448b07e0c483b2deeb3"
+  },
+  "holdout_policy": "Never used for tuning.",
+  "item_count": 35,
+  "sha256": "121d669d3e86a0f23555cc7a9079c49dac74bf99147a334213bae0bcfdb8b3a4",
+  "split_rule": "holdout iff int(sha256(question_id)[:8],16) % 3 == 0; frozen before runs"
+}

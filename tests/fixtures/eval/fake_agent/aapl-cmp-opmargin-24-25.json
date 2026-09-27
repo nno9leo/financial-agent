@@ -1,0 +1,6 @@
+{
+  "tool_calls": [
+    {"name": "compare_periods", "args": {"company": "AAPL", "fiscal_year_a": 2024, "fiscal_year_b": 2025, "metrics": ["operating_margin"]}}
+  ],
+  "final_assistant_text": "Apple's operating margin was 31.5% in fiscal 2024 and 32.0% in fiscal 2025."
+}

@@ -1,0 +1,266 @@
+{
+  "git_sha": "40fc1c8e573375876b3793f10a59cbfacbce2b26",
+  "dirty_tree": false,
+  "python": "3.11.16",
+  "node": "v24.21.0",
+  "pi": "0.87.1",
+  "agent": {
+    "configured_model": "anthropic/claude-sonnet-5",
+    "configured_thinking": "medium",
+    "observed_model": [
+      "anthropic/claude-sonnet-5",
+      "not_reported_by_runtime"
+    ],
+    "observed_thinking": [
+      "medium",
+      "not_reported_by_runtime"
+    ]
+  },
+  "judge": {
+    "implementation": "configured_semantic_judge",
+    "configured_model": "openai/gpt-6-sol",
+    "configured_provider": "OpenAI",
+    "configured_gateway": "openrouter",
+    "configured_effort": "high",
+    "observed_models": [
+      "openai/gpt-6-sol"
+    ],
+    "observed_providers": [
+      "OpenAI"
+    ],
+    "observed_efforts": [
+      "high"
+    ],
+    "provider": "OpenAI",
+    "effort": "high",
+    "gateway": "openrouter",
+    "calls": [
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468740-2GCDvK38fJ4Gg22s83q8",
+        "reasoning_effort": "high",
+        "prompt_tokens": 402,
+        "completion_tokens": 53,
+        "reasoning_tokens": 17,
+        "cost_usd": 0.001334,
+        "latency_s": 1.8612938959995518
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468743-QeriKD5hSFjwrGHGY3BN",
+        "reasoning_effort": "high",
+        "prompt_tokens": 391,
+        "completion_tokens": 57,
+        "reasoning_tokens": 15,
+        "cost_usd": 0.001352,
+        "latency_s": 2.31464017899998
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468751-XDUitykOfPxkBBNKVWHE",
+        "reasoning_effort": "high",
+        "prompt_tokens": 389,
+        "completion_tokens": 257,
+        "reasoning_tokens": 184,
+        "cost_usd": 0.003348,
+        "latency_s": 3.7217425120034022
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468755-rMFffB7olPla6jbJTwhB",
+        "reasoning_effort": "high",
+        "prompt_tokens": 402,
+        "completion_tokens": 32,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.001124,
+        "latency_s": 1.3316661450080574
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468756-J0sLSlwmiocYkxfKFvHl",
+        "reasoning_effort": "high",
+        "prompt_tokens": 391,
+        "completion_tokens": 59,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.001372,
+        "latency_s": 1.4778026599960867
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468777-haJ9QVp0O0TMiDgJVkpj",
+        "reasoning_effort": "high",
+        "prompt_tokens": 675,
+        "completion_tokens": 95,
+        "reasoning_tokens": 19,
+        "cost_usd": 0.0023,
+        "latency_s": 2.1079629129962996
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468779-SA41e4TRPbUWoERUEmtb",
+        "reasoning_effort": "high",
+        "prompt_tokens": 677,
+        "completion_tokens": 156,
+        "reasoning_tokens": 96,
+        "cost_usd": 0.002914,
+        "latency_s": 3.180290859992965
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468782-GSreHphJ5foZAxYe3H3Z",
+        "reasoning_effort": "high",
+        "prompt_tokens": 679,
+        "completion_tokens": 94,
+        "reasoning_tokens": 22,
+        "cost_usd": 0.002298,
+        "latency_s": 1.9992068349965848
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468784-ICnqjoQOiHffIfHi2GJL",
+        "reasoning_effort": "high",
+        "prompt_tokens": 375,
+        "completion_tokens": 379,
+        "reasoning_tokens": 320,
+        "cost_usd": 0.00454,
+        "latency_s": 5.056845717001124
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468856-Lg8QRecy4gbCHRphrboL",
+        "reasoning_effort": "high",
+        "prompt_tokens": 501,
+        "completion_tokens": 142,
+        "reasoning_tokens": 73,
+        "cost_usd": 0.002422,
+        "latency_s": 2.6863351549982326
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468859-fThyG2oruOnf0PMS6aMv",
+        "reasoning_effort": "high",
+        "prompt_tokens": 480,
+        "completion_tokens": 208,
+        "reasoning_tokens": 137,
+        "cost_usd": 0.00304,
+        "latency_s": 3.7071303429984255
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468869-R9duci06WELbYIErXyjs",
+        "reasoning_effort": "high",
+        "prompt_tokens": 503,
+        "completion_tokens": 410,
+        "reasoning_tokens": 341,
+        "cost_usd": 0.005106,
+        "latency_s": 5.32114934900892
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468875-HlvlhIM1JatR3gopFrom",
+        "reasoning_effort": "high",
+        "prompt_tokens": 480,
+        "completion_tokens": 80,
+        "reasoning_tokens": 24,
+        "cost_usd": 0.00176,
+        "latency_s": 1.7851266390061937
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468902-dRLw3fl78YJHJaIgguXQ",
+        "reasoning_effort": "high",
+        "prompt_tokens": 536,
+        "completion_tokens": 98,
+        "reasoning_tokens": 29,
+        "cost_usd": 0.002052,
+        "latency_s": 1.9189823110064026
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468904-eO681woEp2Zu8XpcN0A5",
+        "reasoning_effort": "high",
+        "prompt_tokens": 540,
+        "completion_tokens": 141,
+        "reasoning_tokens": 78,
+        "cost_usd": 0.00249,
+        "latency_s": 2.469163992005633
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468907-7X2UHufGVZH0zYv0OTjm",
+        "reasoning_effort": "high",
+        "prompt_tokens": 533,
+        "completion_tokens": 508,
+        "reasoning_tokens": 442,
+        "cost_usd": 0.006146,
+        "latency_s": 6.4173533099965425
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468922-Ok6fY4GfwbNKBuFwEiSH",
+        "reasoning_effort": "high",
+        "prompt_tokens": 536,
+        "completion_tokens": 95,
+        "reasoning_tokens": 25,
+        "cost_usd": 0.002022,
+        "latency_s": 2.1129252740065567
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468924-JsjqpCedZDyM6Hy8M44V",
+        "reasoning_effort": "high",
+        "prompt_tokens": 540,
+        "completion_tokens": 141,
+        "reasoning_tokens": 71,
+        "cost_usd": 0.00249,
+        "latency_s": 2.6408315369917545
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468927-9bMFiWZ5RTUtX772y3oW",
+        "reasoning_effort": "high",
+        "prompt_tokens": 545,
+        "completion_tokens": 95,
+        "reasoning_tokens": 24,
+        "cost_usd": 0.00204,
+        "latency_s": 2.0135159689962165
+      },
+      {
+        "observed_model": "openai/gpt-6-sol",
+        "provider": "OpenAI",
+        "generation_id": "gen-1790468929-CsVgd1lWfAONYr31daWc",
+        "reasoning_effort": "high",
+        "prompt_tokens": 234,
+        "completion_tokens": 179,
+        "reasoning_tokens": 121,
+        "cost_usd": 0.002258,
+        "latency_s": 2.576254895000602
+      }
+    ]
+  },
+  "embedding": {
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "weights_sha256": "51f1bd0addd6e859e42c2c8021a5e5461385bb676a649f4b269aa445449f2431"
+  },
+  "data_manifest_sha256": "f6194daabb216095e9f202c25ffe0def665f8a89bdfc7d9bea7eab81047db1bf",
+  "secrets": "omitted"
+}

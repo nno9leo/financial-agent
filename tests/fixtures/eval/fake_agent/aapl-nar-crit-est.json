@@ -1,0 +1,6 @@
+{
+  "tool_calls": [
+    {"name": "list_filings", "args": {"company": "AAPL", "form": "10-K", "date_from": "2025-10-31", "date_to": "2025-10-31"}}
+  ],
+  "final_assistant_text": "Apple's critical accounting estimates include income taxes and contingencies."
+}

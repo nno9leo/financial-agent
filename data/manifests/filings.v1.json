@@ -1,0 +1,41 @@
+{
+  "change_reason": null,
+  "created_at": "2026-09-26T00:38:20.309382Z",
+  "entries": [
+    {
+      "accession_number": "0000320193-25-000079",
+      "cik": "0000320193",
+      "company_name": "Apple Inc.",
+      "companyfacts_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+      "companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "document_sha256": "504e86c595d4c1cb00958d975b98c05a8451da309a137712bd6b5672f2dd79e8",
+      "filing_date": "2025-10-31",
+      "form": "10-K",
+      "primary_document": "aapl-20250927.htm",
+      "report_date": "2025-09-27",
+      "retrieved_at": "2026-09-26T00:38:20.309382Z",
+      "selection_rule": "Most recent original 10-K by filing_date; amendments excluded.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "ticker": "AAPL"
+    },
+    {
+      "accession_number": "0001193125-26-323660",
+      "cik": "0000789019",
+      "company_name": "MICROSOFT CORP",
+      "companyfacts_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+      "companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+      "document_sha256": "9a53530ee417ffda80071b7ed68cfbffeda600fff9c31cbbb1093d0afc6e8154",
+      "filing_date": "2026-07-29",
+      "form": "10-K",
+      "primary_document": "msft-20260630.htm",
+      "report_date": "2026-06-30",
+      "retrieved_at": "2026-09-26T00:38:19.804342Z",
+      "selection_rule": "Most recent original 10-K by filing_date; amendments excluded.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "ticker": "MSFT"
+    }
+  ],
+  "manifest_version": "v1",
+  "sec_user_agent_set": true,
+  "supersedes": null
+}

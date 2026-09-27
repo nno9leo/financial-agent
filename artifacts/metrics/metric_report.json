@@ -1,0 +1,1760 @@
+{
+  "artifact": "metric-report",
+  "manifest_version": "v1",
+  "pinned_accessions": {
+    "AAPL": "0000320193-25-000079",
+    "MSFT": "0001193125-26-323660"
+  },
+  "rows": [
+    {
+      "error": {
+        "error_code": "missing_fact",
+        "message": "No reliable fact for concept 'current_assets' (AAPL, fiscal year 2023) after filtering all alias tags; rejection counts by reason: {'other_accession': 142, 'period_mismatch': 2}."
+      },
+      "fiscal_year": 2023,
+      "metric": "current_ratio",
+      "result": null,
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2023,
+      "metric": "free_cash_flow",
+      "result": {
+        "display_value": "$99,584 million",
+        "evidence_ids": [
+          "fact_18bcf028e4af8ac5876c",
+          "fact_0a50afc992a7e73650b6"
+        ],
+        "formula": "operating_cash_flow - capex",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Net Cash Provided by (Used in) Operating Activities",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "110543000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Payments to Acquire Property, Plant, and Equipment",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "10959000000"
+          }
+        ],
+        "metric": "free_cash_flow",
+        "period_end": "2023-09-30",
+        "period_start": "2022-09-25",
+        "result": "99584000000",
+        "result_unit": "USD"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2023,
+      "metric": "net_margin",
+      "result": {
+        "display_value": "25.3%",
+        "evidence_ids": [
+          "fact_af65d70c1c61a5b9eb52",
+          "fact_ad4ad25ba1a2a182b398"
+        ],
+        "formula": "net_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Net Income (Loss) Attributable to Parent",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "NetIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "96995000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "383285000000"
+          }
+        ],
+        "metric": "net_margin",
+        "period_end": "2023-09-30",
+        "period_start": "2022-09-25",
+        "result": "0.2530623426432028386187823682",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2023,
+      "metric": "operating_margin",
+      "result": {
+        "display_value": "29.8%",
+        "evidence_ids": [
+          "fact_378d012a976ae6ad0243",
+          "fact_ad4ad25ba1a2a182b398"
+        ],
+        "formula": "operating_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Operating Income (Loss)",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "OperatingIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "114301000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "383285000000"
+          }
+        ],
+        "metric": "operating_margin",
+        "period_end": "2023-09-30",
+        "period_start": "2022-09-25",
+        "result": "0.2982141226502472050823799523",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2023,
+      "metric": "revenue",
+      "result": {
+        "display_value": "$383,285 million",
+        "evidence_ids": [
+          "fact_ad4ad25ba1a2a182b398"
+        ],
+        "formula": "revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "383285000000"
+          }
+        ],
+        "metric": "revenue",
+        "period_end": "2023-09-30",
+        "period_start": "2022-09-25",
+        "result": "383285000000",
+        "result_unit": "USD"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": {
+        "error_code": "fiscal_year_not_in_filing",
+        "message": "Fiscal year 2022 has no duration period in the pinned filing for AAPL. Fiscal years available in the pinned filing: [2023, 2024, 2025]."
+      },
+      "fiscal_year": 2023,
+      "metric": "revenue_growth_yoy",
+      "result": null,
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "current_ratio",
+      "result": {
+        "display_value": "0.87x",
+        "evidence_ids": [
+          "fact_24de23581bad657c112f",
+          "fact_ba36282166b60cbc53ba"
+        ],
+        "formula": "current_assets / current_liabilities",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024Q3I",
+            "label": "Assets, Current",
+            "period_end": "2024-09-28",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "AssetsCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "152987000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024Q3I",
+            "label": "Liabilities, Current",
+            "period_end": "2024-09-28",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "LiabilitiesCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "176392000000"
+          }
+        ],
+        "metric": "current_ratio",
+        "period_end": "2024-09-28",
+        "period_start": null,
+        "result": "0.8673125765340831783754365277",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "free_cash_flow",
+      "result": {
+        "display_value": "$108,807 million",
+        "evidence_ids": [
+          "fact_510809366c3156ca6530",
+          "fact_f56cc5a0f6b8a244be68"
+        ],
+        "formula": "operating_cash_flow - capex",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Net Cash Provided by (Used in) Operating Activities",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "118254000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Payments to Acquire Property, Plant, and Equipment",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "9447000000"
+          }
+        ],
+        "metric": "free_cash_flow",
+        "period_end": "2024-09-28",
+        "period_start": "2023-10-01",
+        "result": "108807000000",
+        "result_unit": "USD"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "net_margin",
+      "result": {
+        "display_value": "24.0%",
+        "evidence_ids": [
+          "fact_87b70d49b53f5c340808",
+          "fact_804a4b83ea3c7814d07d"
+        ],
+        "formula": "net_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Net Income (Loss) Attributable to Parent",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "NetIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "93736000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "391035000000"
+          }
+        ],
+        "metric": "net_margin",
+        "period_end": "2024-09-28",
+        "period_start": "2023-10-01",
+        "result": "0.2397125576994386691728361911",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "operating_margin",
+      "result": {
+        "display_value": "31.5%",
+        "evidence_ids": [
+          "fact_80211f937dcde930cc14",
+          "fact_804a4b83ea3c7814d07d"
+        ],
+        "formula": "operating_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Operating Income (Loss)",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "OperatingIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "123216000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "391035000000"
+          }
+        ],
+        "metric": "operating_margin",
+        "period_end": "2024-09-28",
+        "period_start": "2023-10-01",
+        "result": "0.3151022287007556868311020753",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "revenue",
+      "result": {
+        "display_value": "$391,035 million",
+        "evidence_ids": [
+          "fact_804a4b83ea3c7814d07d"
+        ],
+        "formula": "revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "391035000000"
+          }
+        ],
+        "metric": "revenue",
+        "period_end": "2024-09-28",
+        "period_start": "2023-10-01",
+        "result": "391035000000",
+        "result_unit": "USD"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "revenue_growth_yoy",
+      "result": {
+        "display_value": "2.0%",
+        "evidence_ids": [
+          "fact_804a4b83ea3c7814d07d",
+          "fact_ad4ad25ba1a2a182b398"
+        ],
+        "formula": "(revenue[FY] - revenue[FY-1]) / revenue[FY-1]",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "391035000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2023",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2023-09-30",
+            "period_start": "2022-09-25",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "383285000000"
+          }
+        ],
+        "metric": "revenue_growth_yoy",
+        "period_end": "2024-09-28",
+        "period_start": "2023-10-01",
+        "result": "0.02021994077514121345734897009",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "current_ratio",
+      "result": {
+        "display_value": "0.89x",
+        "evidence_ids": [
+          "fact_bae113621b15a71a79dd",
+          "fact_52004999ba210f7d8ac9"
+        ],
+        "formula": "current_assets / current_liabilities",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": null,
+            "label": "Assets, Current",
+            "period_end": "2025-09-27",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "AssetsCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "147957000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": null,
+            "label": "Liabilities, Current",
+            "period_end": "2025-09-27",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "LiabilitiesCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "165631000000"
+          }
+        ],
+        "metric": "current_ratio",
+        "period_end": "2025-09-27",
+        "period_start": null,
+        "result": "0.8932929222186667954670321377",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "free_cash_flow",
+      "result": {
+        "display_value": "$98,767 million",
+        "evidence_ids": [
+          "fact_86e796225dadf1fbba81",
+          "fact_624e2369ef145b64782d"
+        ],
+        "formula": "operating_cash_flow - capex",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Net Cash Provided by (Used in) Operating Activities",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "111482000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Payments to Acquire Property, Plant, and Equipment",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "12715000000"
+          }
+        ],
+        "metric": "free_cash_flow",
+        "period_end": "2025-09-27",
+        "period_start": "2024-09-29",
+        "result": "98767000000",
+        "result_unit": "USD"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "net_margin",
+      "result": {
+        "display_value": "26.9%",
+        "evidence_ids": [
+          "fact_d98b953c0e17b46ccc5e",
+          "fact_2cfaa8018776f0816796"
+        ],
+        "formula": "net_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Net Income (Loss) Attributable to Parent",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "NetIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "112010000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "416161000000"
+          }
+        ],
+        "metric": "net_margin",
+        "period_end": "2025-09-27",
+        "period_start": "2024-09-29",
+        "result": "0.2691506412181823861438241450",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "operating_margin",
+      "result": {
+        "display_value": "32.0%",
+        "evidence_ids": [
+          "fact_a2ba3f4c26ea9742f71f",
+          "fact_2cfaa8018776f0816796"
+        ],
+        "formula": "operating_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Operating Income (Loss)",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "OperatingIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "133050000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "416161000000"
+          }
+        ],
+        "metric": "operating_margin",
+        "period_end": "2025-09-27",
+        "period_start": "2024-09-29",
+        "result": "0.3197079976259188150739737746",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "revenue",
+      "result": {
+        "display_value": "$416,161 million",
+        "evidence_ids": [
+          "fact_2cfaa8018776f0816796"
+        ],
+        "formula": "revenue",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "416161000000"
+          }
+        ],
+        "metric": "revenue",
+        "period_end": "2025-09-27",
+        "period_start": "2024-09-29",
+        "result": "416161000000",
+        "result_unit": "USD"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "revenue_growth_yoy",
+      "result": {
+        "display_value": "6.4%",
+        "evidence_ids": [
+          "fact_2cfaa8018776f0816796",
+          "fact_804a4b83ea3c7814d07d"
+        ],
+        "formula": "(revenue[FY] - revenue[FY-1]) / revenue[FY-1]",
+        "inputs": [
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-09-27",
+            "period_start": "2024-09-29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "416161000000"
+          },
+          {
+            "accession_number": "0000320193-25-000079",
+            "cik": "0000320193",
+            "filed_at": "2025-10-31",
+            "fiscal_period": "FY",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-09-28",
+            "period_start": "2023-10-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "AAPL",
+            "unit": "USD",
+            "value": "391035000000"
+          }
+        ],
+        "metric": "revenue_growth_yoy",
+        "period_end": "2025-09-27",
+        "period_start": "2024-09-29",
+        "result": "0.06425511782832738757400232716",
+        "result_unit": "ratio"
+      },
+      "ticker": "AAPL"
+    },
+    {
+      "error": {
+        "error_code": "missing_fact",
+        "message": "No reliable fact for concept 'current_assets' (MSFT, fiscal year 2024) after filtering all alias tags; rejection counts by reason: {'other_accession': 140, 'period_mismatch': 2}."
+      },
+      "fiscal_year": 2024,
+      "metric": "current_ratio",
+      "result": null,
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "free_cash_flow",
+      "result": {
+        "display_value": "$74,071 million",
+        "evidence_ids": [
+          "fact_590803dba410f8175382",
+          "fact_cfc70ae017b81833a5b7"
+        ],
+        "formula": "operating_cash_flow - capex",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Net Cash Provided by (Used in) Operating Activities",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "118548000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Payments to Acquire Property, Plant, and Equipment",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "44477000000"
+          }
+        ],
+        "metric": "free_cash_flow",
+        "period_end": "2024-06-30",
+        "period_start": "2023-07-01",
+        "result": "74071000000",
+        "result_unit": "USD"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "net_margin",
+      "result": {
+        "display_value": "36.0%",
+        "evidence_ids": [
+          "fact_338be491843a4c6c90cc",
+          "fact_a6c7e2d32660e735dd22"
+        ],
+        "formula": "net_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Net Income (Loss) Attributable to Parent",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "NetIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "88136000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "245122000000"
+          }
+        ],
+        "metric": "net_margin",
+        "period_end": "2024-06-30",
+        "period_start": "2023-07-01",
+        "result": "0.3595597294408498625174402950",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "operating_margin",
+      "result": {
+        "display_value": "44.6%",
+        "evidence_ids": [
+          "fact_5294d663b04907b03eda",
+          "fact_a6c7e2d32660e735dd22"
+        ],
+        "formula": "operating_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Operating Income (Loss)",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "OperatingIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "109433000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "245122000000"
+          }
+        ],
+        "metric": "operating_margin",
+        "period_end": "2024-06-30",
+        "period_start": "2023-07-01",
+        "result": "0.4464429957327371676144940071",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2024,
+      "metric": "revenue",
+      "result": {
+        "display_value": "$245,122 million",
+        "evidence_ids": [
+          "fact_a6c7e2d32660e735dd22"
+        ],
+        "formula": "revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "245122000000"
+          }
+        ],
+        "metric": "revenue",
+        "period_end": "2024-06-30",
+        "period_start": "2023-07-01",
+        "result": "245122000000",
+        "result_unit": "USD"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": {
+        "error_code": "fiscal_year_not_in_filing",
+        "message": "Fiscal year 2023 has no duration period in the pinned filing for MSFT. Fiscal years available in the pinned filing: [2024, 2025, 2026]."
+      },
+      "fiscal_year": 2024,
+      "metric": "revenue_growth_yoy",
+      "result": null,
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "current_ratio",
+      "result": {
+        "display_value": "1.35x",
+        "evidence_ids": [
+          "fact_99a9a1cd23755b5b5dd0",
+          "fact_7cdf2aeae22c6a527a47"
+        ],
+        "formula": "current_assets / current_liabilities",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025Q2I",
+            "label": "Assets, Current",
+            "period_end": "2025-06-30",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "AssetsCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "191131000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025Q2I",
+            "label": "Liabilities, Current",
+            "period_end": "2025-06-30",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "LiabilitiesCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "141218000000"
+          }
+        ],
+        "metric": "current_ratio",
+        "period_end": "2025-06-30",
+        "period_start": null,
+        "result": "1.353446444504241668909062584",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "free_cash_flow",
+      "result": {
+        "display_value": "$71,611 million",
+        "evidence_ids": [
+          "fact_1708e321194b4be5abc8",
+          "fact_71024cb61ebc9b6b4dd6"
+        ],
+        "formula": "operating_cash_flow - capex",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Net Cash Provided by (Used in) Operating Activities",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "136162000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Payments to Acquire Property, Plant, and Equipment",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "64551000000"
+          }
+        ],
+        "metric": "free_cash_flow",
+        "period_end": "2025-06-30",
+        "period_start": "2024-07-01",
+        "result": "71611000000",
+        "result_unit": "USD"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "net_margin",
+      "result": {
+        "display_value": "36.1%",
+        "evidence_ids": [
+          "fact_7be4d1aeeb7eb4d38e65",
+          "fact_b4f5f3b91a9842d64231"
+        ],
+        "formula": "net_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Net Income (Loss) Attributable to Parent",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "NetIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "101832000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "281724000000"
+          }
+        ],
+        "metric": "net_margin",
+        "period_end": "2025-06-30",
+        "period_start": "2024-07-01",
+        "result": "0.3614601524896707415768624611",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "operating_margin",
+      "result": {
+        "display_value": "45.6%",
+        "evidence_ids": [
+          "fact_5413a385b7da772cd83a",
+          "fact_b4f5f3b91a9842d64231"
+        ],
+        "formula": "operating_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Operating Income (Loss)",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "OperatingIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "128528000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "281724000000"
+          }
+        ],
+        "metric": "operating_margin",
+        "period_end": "2025-06-30",
+        "period_start": "2024-07-01",
+        "result": "0.4562195624085984864619272763",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "revenue",
+      "result": {
+        "display_value": "$281,724 million",
+        "evidence_ids": [
+          "fact_b4f5f3b91a9842d64231"
+        ],
+        "formula": "revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "281724000000"
+          }
+        ],
+        "metric": "revenue",
+        "period_end": "2025-06-30",
+        "period_start": "2024-07-01",
+        "result": "281724000000",
+        "result_unit": "USD"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2025,
+      "metric": "revenue_growth_yoy",
+      "result": {
+        "display_value": "14.9%",
+        "evidence_ids": [
+          "fact_b4f5f3b91a9842d64231",
+          "fact_a6c7e2d32660e735dd22"
+        ],
+        "formula": "(revenue[FY] - revenue[FY-1]) / revenue[FY-1]",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "281724000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2024",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2024-06-30",
+            "period_start": "2023-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "245122000000"
+          }
+        ],
+        "metric": "revenue_growth_yoy",
+        "period_end": "2025-06-30",
+        "period_start": "2024-07-01",
+        "result": "0.1493215623240671991906071262",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2026,
+      "metric": "current_ratio",
+      "result": {
+        "display_value": "1.23x",
+        "evidence_ids": [
+          "fact_308c32e71ab3c97c1850",
+          "fact_4b204b4f5148fd78a2cf"
+        ],
+        "formula": "current_assets / current_liabilities",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026Q2I",
+            "label": "Assets, Current",
+            "period_end": "2026-06-30",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "AssetsCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "207710000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026Q2I",
+            "label": "Liabilities, Current",
+            "period_end": "2026-06-30",
+            "period_start": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "LiabilitiesCurrent",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "168825000000"
+          }
+        ],
+        "metric": "current_ratio",
+        "period_end": "2026-06-30",
+        "period_start": null,
+        "result": "1.230327261957648452539612024",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2026,
+      "metric": "free_cash_flow",
+      "result": {
+        "display_value": "$66,987 million",
+        "evidence_ids": [
+          "fact_c92e22d91a8b6b4d2701",
+          "fact_40e5ca25aabd40715957"
+        ],
+        "formula": "operating_cash_flow - capex",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Net Cash Provided by (Used in) Operating Activities",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "182935000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Payments to Acquire Property, Plant, and Equipment",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "115948000000"
+          }
+        ],
+        "metric": "free_cash_flow",
+        "period_end": "2026-06-30",
+        "period_start": "2025-07-01",
+        "result": "66987000000",
+        "result_unit": "USD"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2026,
+      "metric": "net_margin",
+      "result": {
+        "display_value": "40.3%",
+        "evidence_ids": [
+          "fact_bdeeab8d232db92c76e0",
+          "fact_5708b03f7a1dad8a6782"
+        ],
+        "formula": "net_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Net Income (Loss) Attributable to Parent",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "NetIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "133749000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "331839000000"
+          }
+        ],
+        "metric": "net_margin",
+        "period_end": "2026-06-30",
+        "period_start": "2025-07-01",
+        "result": "0.4030538905915217921944075290",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2026,
+      "metric": "operating_margin",
+      "result": {
+        "display_value": "46.8%",
+        "evidence_ids": [
+          "fact_2032f7e78b914a0d9385",
+          "fact_5708b03f7a1dad8a6782"
+        ],
+        "formula": "operating_income / revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Operating Income (Loss)",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "OperatingIncomeLoss",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "155237000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "331839000000"
+          }
+        ],
+        "metric": "operating_margin",
+        "period_end": "2026-06-30",
+        "period_start": "2025-07-01",
+        "result": "0.4678081840892722073053498835",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2026,
+      "metric": "revenue",
+      "result": {
+        "display_value": "$331,839 million",
+        "evidence_ids": [
+          "fact_5708b03f7a1dad8a6782"
+        ],
+        "formula": "revenue",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "331839000000"
+          }
+        ],
+        "metric": "revenue",
+        "period_end": "2026-06-30",
+        "period_start": "2025-07-01",
+        "result": "331839000000",
+        "result_unit": "USD"
+      },
+      "ticker": "MSFT"
+    },
+    {
+      "error": null,
+      "fiscal_year": 2026,
+      "metric": "revenue_growth_yoy",
+      "result": {
+        "display_value": "17.8%",
+        "evidence_ids": [
+          "fact_5708b03f7a1dad8a6782",
+          "fact_b4f5f3b91a9842d64231"
+        ],
+        "formula": "(revenue[FY] - revenue[FY-1]) / revenue[FY-1]",
+        "inputs": [
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2026",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2026-06-30",
+            "period_start": "2025-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "331839000000"
+          },
+          {
+            "accession_number": "0001193125-26-323660",
+            "cik": "0000789019",
+            "filed_at": "2026-07-29",
+            "fiscal_period": "FY",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "frame": "CY2025",
+            "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+            "period_end": "2025-06-30",
+            "period_start": "2024-07-01",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "taxonomy": "us-gaap",
+            "ticker": "MSFT",
+            "unit": "USD",
+            "value": "281724000000"
+          }
+        ],
+        "metric": "revenue_growth_yoy",
+        "period_end": "2026-06-30",
+        "period_start": "2025-07-01",
+        "result": "0.1778868679984665843165651489",
+        "result_unit": "ratio"
+      },
+      "ticker": "MSFT"
+    }
+  ]
+}

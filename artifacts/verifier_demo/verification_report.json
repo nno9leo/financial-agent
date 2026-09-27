@@ -1,0 +1,290 @@
+{
+  "judge_id": "scripted-fake/1",
+  "note": "Narrative verdicts come from a scripted fake judge; this report demonstrates the deterministic layer and is not a measurement.",
+  "partially_supported": 1,
+  "supported": 6,
+  "unsupported": 6,
+  "unsupported_rate": 0.46153846153846156,
+  "verifications": [
+    {
+      "claim_id": "c01",
+      "claim_text": "Microsoft's revenue for fiscal 2026 was $331.8 billion.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "absolute_difference": "39000000.0",
+        "candidate_value": "331839000000",
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "matched_evidence_id": "fact_5708b03f7a1dad8a6782",
+        "period_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "structured_evidence_present": true,
+        "ticker_matches": true,
+        "tolerance": "50000000.00",
+        "unit_matches": true,
+        "value_matches": true
+      },
+      "evidence_ids": [
+        "fact_5708b03f7a1dad8a6782"
+      ],
+      "reason": "deterministic_match",
+      "semantic_score": null,
+      "verdict": "supported"
+    },
+    {
+      "claim_id": "c02",
+      "claim_text": "Microsoft's revenue for fiscal 2025 was $331.8 billion.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "period_matches": false,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "structured_evidence_present": true,
+        "ticker_matches": true,
+        "unit_matches": true
+      },
+      "evidence_ids": [
+        "fact_5708b03f7a1dad8a6782"
+      ],
+      "reason": "period_mismatch",
+      "semantic_score": null,
+      "verdict": "unsupported"
+    },
+    {
+      "claim_id": "c03",
+      "claim_text": "Microsoft's fiscal 2026 operating margin was $46.8 million.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "structured_evidence_present": true,
+        "ticker_matches": true,
+        "unit_matches": false
+      },
+      "evidence_ids": [
+        "met_b3b19d0059b3351482b0"
+      ],
+      "reason": "unit_mismatch",
+      "semantic_score": null,
+      "verdict": "unsupported"
+    },
+    {
+      "claim_id": "c04",
+      "claim_text": "Microsoft's fiscal 2026 operating margin was 46.8%.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "absolute_difference": "0.01918159107277926946501165",
+        "candidate_value": "46.78081840892722073053498835",
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "matched_evidence_id": "met_b3b19d0059b3351482b0",
+        "period_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "structured_evidence_present": true,
+        "ticker_matches": true,
+        "tolerance": "0.05",
+        "unit_matches": true,
+        "value_matches": true
+      },
+      "evidence_ids": [
+        "met_b3b19d0059b3351482b0"
+      ],
+      "reason": "deterministic_match",
+      "semantic_score": null,
+      "verdict": "supported"
+    },
+    {
+      "claim_id": "c05",
+      "claim_text": "Apple's fiscal 2025 10-K has accession number 0000320193-25-000079.",
+      "claim_type": "metadata",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "metadata_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "fact_2cfaa8018776f0816796"
+      ],
+      "reason": "deterministic_match",
+      "semantic_score": null,
+      "verdict": "supported"
+    },
+    {
+      "claim_id": "c06",
+      "claim_text": "Apple's fiscal 2025 10-K was filed on 2025-10-30.",
+      "claim_type": "metadata",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "metadata_matches": false,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "fact_2cfaa8018776f0816796"
+      ],
+      "reason": "metadata_mismatch",
+      "semantic_score": null,
+      "verdict": "unsupported"
+    },
+    {
+      "claim_id": "c07",
+      "claim_text": "Apple's iPhone net sales increased in fiscal 2025 due to higher net sales of Pro models.",
+      "claim_type": "narrative",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "text_evidence_present": true,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "ev_426b275bb4fd862c5317"
+      ],
+      "reason": "scripted_entailed",
+      "semantic_score": 1.0,
+      "verdict": "supported"
+    },
+    {
+      "claim_id": "c08",
+      "claim_text": "Apple's iPhone net sales increased in fiscal 2025 due to higher net sales of Pro models.",
+      "claim_type": "narrative",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "text_evidence_present": true,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "ev_e777a0715850dc81ab53"
+      ],
+      "reason": "scripted_not_entailed",
+      "semantic_score": 0.0,
+      "verdict": "unsupported"
+    },
+    {
+      "claim_id": "c09",
+      "claim_text": "Apple's iPhone net sales increased in fiscal 2025 due to Pro models and strong growth in Greater China.",
+      "claim_type": "narrative",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "text_evidence_present": true,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "ev_426b275bb4fd862c5317"
+      ],
+      "reason": "scripted_partial",
+      "semantic_score": 0.5,
+      "verdict": "partially_supported"
+    },
+    {
+      "claim_id": "c10",
+      "claim_text": "Microsoft's Intelligent Cloud revenue increased, driven by Azure.",
+      "claim_type": "narrative",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "text_evidence_present": true,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "ev_fffbd37ac73dbe0a73f2"
+      ],
+      "reason": "scripted_entailed",
+      "semantic_score": 1.0,
+      "verdict": "supported"
+    },
+    {
+      "claim_id": "c11",
+      "claim_text": "Apple's fiscal 2025 free cash flow was $98.8 billion.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "absolute_difference": "33000000.0",
+        "candidate_value": "98767000000",
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "matched_evidence_id": "met_e3c1c50fb028d7d3caa9",
+        "period_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "structured_evidence_present": true,
+        "ticker_matches": true,
+        "tolerance": "50000000.00",
+        "unit_matches": true,
+        "value_matches": true
+      },
+      "evidence_ids": [
+        "met_e3c1c50fb028d7d3caa9"
+      ],
+      "reason": "deterministic_match",
+      "semantic_score": null,
+      "verdict": "supported"
+    },
+    {
+      "claim_id": "c12",
+      "claim_text": "Microsoft's revenue for fiscal 2026 was $331.8 billion.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "evidence_exists": true,
+        "evidence_ids_present": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "single_accession": true,
+        "structured_evidence_present": false,
+        "ticker_matches": true
+      },
+      "evidence_ids": [
+        "ev_fffbd37ac73dbe0a73f2"
+      ],
+      "reason": "numeric_claim_without_structured_evidence",
+      "semantic_score": null,
+      "verdict": "unsupported"
+    },
+    {
+      "claim_id": "c13",
+      "claim_text": "Microsoft's revenue for fiscal 2026 was $331.8 billion.",
+      "claim_type": "numeric",
+      "deterministic_checks": {
+        "evidence_exists": false,
+        "evidence_ids_present": true,
+        "failed_evidence_id": "ev_doesnotexist000000"
+      },
+      "evidence_ids": [
+        "ev_doesnotexist000000"
+      ],
+      "reason": "evidence_not_found",
+      "semantic_score": null,
+      "verdict": "unsupported"
+    }
+  ]
+}

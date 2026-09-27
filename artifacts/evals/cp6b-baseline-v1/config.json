@@ -1,0 +1,12 @@
+{
+  "dataset_version": "v1",
+  "dataset_sha256": "121d669d3e86a0f23555cc7a9079c49dac74bf99147a334213bae0bcfdb8b3a4",
+  "split": "all",
+  "top_k": 5,
+  "max_verify_attempts": 2,
+  "per_item_timeout_s": 300,
+  "max_tool_calls_per_item": 30,
+  "prompt_guidance_sha256": "11d7fdb0d2934f0bf046018b8094b1b883872f08cdb68232e10e796b468fa452",
+  "agent": "pi",
+  "allow_dirty": false
+}

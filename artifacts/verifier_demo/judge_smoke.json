@@ -1,0 +1,166 @@
+{
+  "note": "Live judge smoke on 4 hand-written demo claims; not an evaluation metric.",
+  "judge_id": "openrouter:openai/gpt-6-sol:reasoning-high:prompt-v1",
+  "verdicts": [
+    {
+      "claim_id": "c07",
+      "claim_text": "Apple's iPhone net sales increased in fiscal 2025 due to higher net sales of Pro models.",
+      "claim_type": "narrative",
+      "evidence_ids": [
+        "ev_426b275bb4fd862c5317"
+      ],
+      "verdict": "supported",
+      "deterministic_checks": {
+        "evidence_ids_present": true,
+        "evidence_exists": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "ticker_matches": true,
+        "single_accession": true,
+        "text_evidence_present": true
+      },
+      "semantic_score": 1.0,
+      "reason": "The evidence states that iPhone net sales increased in 2025 compared with 2024 due to higher net sales of Pro models."
+    },
+    {
+      "claim_id": "c08",
+      "claim_text": "Apple's iPhone net sales increased in fiscal 2025 due to higher net sales of Pro models.",
+      "claim_type": "narrative",
+      "evidence_ids": [
+        "ev_e777a0715850dc81ab53"
+      ],
+      "verdict": "unsupported",
+      "deterministic_checks": {
+        "evidence_ids_present": true,
+        "evidence_exists": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "ticker_matches": true,
+        "single_accession": true,
+        "text_evidence_present": true
+      },
+      "semantic_score": 0.0,
+      "reason": "The evidence discusses operational and supply-chain risks. It does not state whether iPhone net sales increased in fiscal 2025 or attribute any increase to Pro models."
+    },
+    {
+      "claim_id": "c09",
+      "claim_text": "Apple's iPhone net sales increased in fiscal 2025 due to Pro models and strong growth in Greater China.",
+      "claim_type": "narrative",
+      "evidence_ids": [
+        "ev_426b275bb4fd862c5317"
+      ],
+      "verdict": "partially_supported",
+      "deterministic_checks": {
+        "evidence_ids_present": true,
+        "evidence_exists": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "ticker_matches": true,
+        "single_accession": true,
+        "text_evidence_present": true
+      },
+      "semantic_score": 0.67,
+      "reason": "The evidence states that iPhone net sales increased in 2025 versus 2024 due to higher sales of Pro models. It does not state that strong growth in Greater China contributed."
+    },
+    {
+      "claim_id": "c10",
+      "claim_text": "Microsoft's Intelligent Cloud revenue increased, driven by Azure.",
+      "claim_type": "narrative",
+      "evidence_ids": [
+        "ev_fffbd37ac73dbe0a73f2"
+      ],
+      "verdict": "supported",
+      "deterministic_checks": {
+        "evidence_ids_present": true,
+        "evidence_exists": true,
+        "hash_matches": true,
+        "provenance_consistent": true,
+        "ticker_matches": true,
+        "single_accession": true,
+        "text_evidence_present": true
+      },
+      "semantic_score": 1.0,
+      "reason": "The evidence explicitly states that Intelligent Cloud revenue increased, driven by Azure."
+    }
+  ],
+  "calls": [
+    {
+      "judge_id": "openrouter:openai/gpt-6-sol:reasoning-high:prompt-v1",
+      "configured_model": "openai/gpt-6-sol",
+      "observed_model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "generation_id": "gen-1790407700-Hvw0Mxvyv6wG06gdM9Z1",
+      "reasoning_effort": "high",
+      "prompt_version": "v1",
+      "prompt_sha256": "02ced7ab2a4eb0c4fa8ef4896696c7703a08678acba0c7d4f1dba8459f3cb17e",
+      "prompt_tokens": 394,
+      "completion_tokens": 112,
+      "reasoning_tokens": 57,
+      "cost_usd": 0.001908,
+      "latency_s": 2.7350784150003165,
+      "label": "entailed",
+      "score": 1.0,
+      "rationale": "The evidence states that iPhone net sales increased in 2025 compared with 2024 due to higher net sales of Pro models.",
+      "error_code": null
+    },
+    {
+      "judge_id": "openrouter:openai/gpt-6-sol:reasoning-high:prompt-v1",
+      "configured_model": "openai/gpt-6-sol",
+      "observed_model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "generation_id": "gen-1790407702-OuFPOzhC8kWd1I2aWIhf",
+      "reasoning_effort": "high",
+      "prompt_version": "v1",
+      "prompt_sha256": "0500bfdc6f8e7ed9ae43e27f8d6e9d056eec0061e941a2414d5259bfbc6150dc",
+      "prompt_tokens": 364,
+      "completion_tokens": 99,
+      "reasoning_tokens": 39,
+      "cost_usd": 0.001718,
+      "latency_s": 2.0012380110019876,
+      "label": "not_entailed",
+      "score": 0.0,
+      "rationale": "The evidence discusses operational and supply-chain risks. It does not state whether iPhone net sales increased in fiscal 2025 or attribute any increase to Pro models.",
+      "error_code": null
+    },
+    {
+      "judge_id": "openrouter:openai/gpt-6-sol:reasoning-high:prompt-v1",
+      "configured_model": "openai/gpt-6-sol",
+      "observed_model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "generation_id": "gen-1790407704-dZLJzyWYFuT4UJBJna55",
+      "reasoning_effort": "high",
+      "prompt_version": "v1",
+      "prompt_sha256": "a8d31d041eb901a036f0d6531627cca0e8350955f496748171f1fef23b0b2a6f",
+      "prompt_tokens": 396,
+      "completion_tokens": 111,
+      "reasoning_tokens": 47,
+      "cost_usd": 0.001902,
+      "latency_s": 2.1629403049992106,
+      "label": "partial",
+      "score": 0.67,
+      "rationale": "The evidence states that iPhone net sales increased in 2025 versus 2024 due to higher sales of Pro models. It does not state that strong growth in Greater China contributed.",
+      "error_code": null
+    },
+    {
+      "judge_id": "openrouter:openai/gpt-6-sol:reasoning-high:prompt-v1",
+      "configured_model": "openai/gpt-6-sol",
+      "observed_model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "generation_id": "gen-1790407706-OVogAeyq5f72I9SuHRbn",
+      "reasoning_effort": "high",
+      "prompt_version": "v1",
+      "prompt_sha256": "e8ca7bcf1fcdff55bbc7e0857ab036996e9c13edb0f2dd2d4be834e1aa610038",
+      "prompt_tokens": 511,
+      "completion_tokens": 62,
+      "reasoning_tokens": 20,
+      "cost_usd": 0.001642,
+      "latency_s": 1.5340685049995955,
+      "label": "entailed",
+      "score": 1.0,
+      "rationale": "The evidence explicitly states that Intelligent Cloud revenue increased, driven by Azure.",
+      "error_code": null
+    }
+  ],
+  "total_cost_usd": 0.00717,
+  "total_tokens": 2049
+}

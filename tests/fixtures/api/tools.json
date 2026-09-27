@@ -1,0 +1,2149 @@
+{
+  "tools": [
+    {
+      "description": "Find SEC companies by ticker, CIK, or name using the raw cache; it does not fetch or authorize unpinned companies, and unmatched queries return an explicit error.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "CompanySearchInput",
+        "type": "object"
+      },
+      "name": "search_companies",
+      "output_schema": {
+        "properties": {
+          "ambiguous": {
+            "title": "Ambiguous",
+            "type": "boolean"
+          },
+          "candidates": {
+            "items": {
+              "properties": {
+                "cik": {
+                  "title": "Cik",
+                  "type": "string"
+                },
+                "company_name": {
+                  "title": "Company Name",
+                  "type": "string"
+                },
+                "match_type": {
+                  "enum": [
+                    "ticker",
+                    "cik",
+                    "name"
+                  ],
+                  "title": "Match Type",
+                  "type": "string"
+                },
+                "pinned": {
+                  "title": "Pinned",
+                  "type": "boolean"
+                },
+                "pinned_accession": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Pinned Accession"
+                },
+                "ticker": {
+                  "title": "Ticker",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ticker",
+                "cik",
+                "company_name",
+                "match_type",
+                "pinned",
+                "pinned_accession"
+              ],
+              "title": "CompanyCandidate",
+              "type": "object"
+            },
+            "title": "Candidates",
+            "type": "array"
+          }
+        },
+        "required": [
+          "candidates",
+          "ambiguous"
+        ],
+        "title": "CompanySearchOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "List SEC filings and exclusions for a company and date range; this does not pin or ingest filings, and unavailable ranges return a typed error.",
+      "input_schema": {
+        "properties": {
+          "company": {
+            "title": "Company",
+            "type": "string"
+          },
+          "date_from": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Date From"
+          },
+          "date_to": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Date To"
+          },
+          "form": {
+            "enum": [
+              "10-K",
+              "10-Q",
+              "8-K"
+            ],
+            "title": "Form",
+            "type": "string"
+          }
+        },
+        "required": [
+          "company",
+          "form"
+        ],
+        "title": "ListFilingsInput",
+        "type": "object"
+      },
+      "name": "list_filings",
+      "output_schema": {
+        "properties": {
+          "company": {
+            "properties": {
+              "cik": {
+                "title": "Cik",
+                "type": "string"
+              },
+              "company_name": {
+                "title": "Company Name",
+                "type": "string"
+              },
+              "ticker": {
+                "title": "Ticker",
+                "type": "string"
+              }
+            },
+            "required": [
+              "ticker",
+              "cik",
+              "company_name"
+            ],
+            "title": "CompanyMetadata",
+            "type": "object"
+          },
+          "coverage_start": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coverage Start"
+          },
+          "excluded": {
+            "items": {
+              "properties": {
+                "accession_number": {
+                  "title": "Accession Number",
+                  "type": "string"
+                },
+                "filing_date": {
+                  "format": "date",
+                  "title": "Filing Date",
+                  "type": "string"
+                },
+                "form": {
+                  "title": "Form",
+                  "type": "string"
+                },
+                "reason": {
+                  "enum": [
+                    "amendment",
+                    "missing_report_date"
+                  ],
+                  "title": "Reason",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accession_number",
+                "form",
+                "filing_date",
+                "reason"
+              ],
+              "title": "ExcludedFiling",
+              "type": "object"
+            },
+            "title": "Excluded",
+            "type": "array"
+          },
+          "filings": {
+            "items": {
+              "properties": {
+                "accession_number": {
+                  "title": "Accession Number",
+                  "type": "string"
+                },
+                "cik": {
+                  "title": "Cik",
+                  "type": "string"
+                },
+                "company_name": {
+                  "title": "Company Name",
+                  "type": "string"
+                },
+                "filing_date": {
+                  "format": "date",
+                  "title": "Filing Date",
+                  "type": "string"
+                },
+                "form": {
+                  "enum": [
+                    "10-K",
+                    "10-Q",
+                    "8-K"
+                  ],
+                  "title": "Form",
+                  "type": "string"
+                },
+                "primary_document": {
+                  "title": "Primary Document",
+                  "type": "string"
+                },
+                "report_date": {
+                  "format": "date",
+                  "title": "Report Date",
+                  "type": "string"
+                },
+                "source_url": {
+                  "format": "uri",
+                  "maxLength": 2083,
+                  "minLength": 1,
+                  "title": "Source Url",
+                  "type": "string"
+                },
+                "ticker": {
+                  "title": "Ticker",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ticker",
+                "cik",
+                "company_name",
+                "form",
+                "accession_number",
+                "filing_date",
+                "report_date",
+                "primary_document",
+                "source_url"
+              ],
+              "title": "FilingMetadata",
+              "type": "object"
+            },
+            "title": "Filings",
+            "type": "array"
+          },
+          "older_pages_not_loaded": {
+            "title": "Older Pages Not Loaded",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "filings",
+          "excluded",
+          "coverage_start",
+          "older_pages_not_loaded",
+          "company"
+        ],
+        "title": "ListFilingsOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "Read a paginated section from the pinned filing's verified normalized text; it does not summarize or silently truncate, and missing build output points to scripts/build_chunks.py.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "accession_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Accession Number"
+          },
+          "company": {
+            "minLength": 1,
+            "title": "Company",
+            "type": "string"
+          },
+          "max_chars": {
+            "default": 12000,
+            "maximum": 40000,
+            "minimum": 1,
+            "title": "Max Chars",
+            "type": "integer"
+          },
+          "offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Offset",
+            "type": "integer"
+          },
+          "section": {
+            "enum": [
+              "risk_factors",
+              "mdna",
+              "financial_statements"
+            ],
+            "title": "SectionName",
+            "type": "string"
+          }
+        },
+        "required": [
+          "company",
+          "section"
+        ],
+        "title": "FilingSectionInput",
+        "type": "object"
+      },
+      "name": "get_filing_section",
+      "output_schema": {
+        "properties": {
+          "accession_number": {
+            "title": "Accession Number",
+            "type": "string"
+          },
+          "cik": {
+            "title": "Cik",
+            "type": "string"
+          },
+          "end_offset": {
+            "title": "End Offset",
+            "type": "integer"
+          },
+          "filing_date": {
+            "title": "Filing Date",
+            "type": "string"
+          },
+          "form": {
+            "title": "Form",
+            "type": "string"
+          },
+          "heading_text": {
+            "title": "Heading Text",
+            "type": "string"
+          },
+          "next_offset": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Offset"
+          },
+          "offset": {
+            "title": "Offset",
+            "type": "integer"
+          },
+          "report_date": {
+            "title": "Report Date",
+            "type": "string"
+          },
+          "returned_chars": {
+            "title": "Returned Chars",
+            "type": "integer"
+          },
+          "section_sha256": {
+            "title": "Section Sha256",
+            "type": "string"
+          },
+          "source_url": {
+            "title": "Source Url",
+            "type": "string"
+          },
+          "start_offset": {
+            "title": "Start Offset",
+            "type": "integer"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "ticker": {
+            "title": "Ticker",
+            "type": "string"
+          },
+          "total_chars": {
+            "title": "Total Chars",
+            "type": "integer"
+          },
+          "truncated": {
+            "title": "Truncated",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "text",
+          "total_chars",
+          "offset",
+          "returned_chars",
+          "next_offset",
+          "truncated",
+          "heading_text",
+          "section_sha256",
+          "start_offset",
+          "end_offset",
+          "ticker",
+          "cik",
+          "accession_number",
+          "form",
+          "filing_date",
+          "report_date",
+          "source_url"
+        ],
+        "title": "FilingSectionOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "Retrieve ranked evidence from the pinned filing; results are evidence, not answers, and all numbers must come from calculate_financial_metric or compare_periods.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "accession_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Accession Number"
+          },
+          "company": {
+            "minLength": 1,
+            "title": "Company",
+            "type": "string"
+          },
+          "question": {
+            "minLength": 1,
+            "title": "Question",
+            "type": "string"
+          },
+          "sections": {
+            "anyOf": [
+              {
+                "items": {
+                  "enum": [
+                    "risk_factors",
+                    "mdna",
+                    "financial_statements"
+                  ],
+                  "title": "SectionName",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Sections"
+          },
+          "top_k": {
+            "default": 5,
+            "maximum": 20,
+            "minimum": 1,
+            "title": "Top K",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "question",
+          "company"
+        ],
+        "title": "SearchFilingChunksInput",
+        "type": "object"
+      },
+      "name": "search_filing_chunks",
+      "output_schema": {
+        "properties": {
+          "accession_number": {
+            "title": "Accession Number",
+            "type": "string"
+          },
+          "accession_resolved_from_manifest": {
+            "title": "Accession Resolved From Manifest",
+            "type": "boolean"
+          },
+          "embedding_model": {
+            "title": "Embedding Model",
+            "type": "string"
+          },
+          "embedding_model_sha256": {
+            "title": "Embedding Model Sha256",
+            "type": "string"
+          },
+          "evidence": {
+            "items": {
+              "properties": {
+                "accession_number": {
+                  "title": "Accession Number",
+                  "type": "string"
+                },
+                "chunk_id": {
+                  "title": "Chunk Id",
+                  "type": "string"
+                },
+                "cik": {
+                  "title": "Cik",
+                  "type": "string"
+                },
+                "content_hash": {
+                  "title": "Content Hash",
+                  "type": "string"
+                },
+                "end_offset": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "End Offset"
+                },
+                "evidence_id": {
+                  "title": "Evidence Id",
+                  "type": "string"
+                },
+                "filing_date": {
+                  "format": "date",
+                  "title": "Filing Date",
+                  "type": "string"
+                },
+                "filing_form": {
+                  "title": "Filing Form",
+                  "type": "string"
+                },
+                "page_number": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Page Number"
+                },
+                "retrieval_score": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Retrieval Score"
+                },
+                "section": {
+                  "title": "Section",
+                  "type": "string"
+                },
+                "source_url": {
+                  "format": "uri",
+                  "maxLength": 2083,
+                  "minLength": 1,
+                  "title": "Source Url",
+                  "type": "string"
+                },
+                "start_offset": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Start Offset"
+                },
+                "text": {
+                  "title": "Text",
+                  "type": "string"
+                },
+                "ticker": {
+                  "title": "Ticker",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "evidence_id",
+                "ticker",
+                "cik",
+                "accession_number",
+                "filing_form",
+                "filing_date",
+                "section",
+                "chunk_id",
+                "text",
+                "source_url",
+                "start_offset",
+                "end_offset",
+                "page_number",
+                "content_hash",
+                "retrieval_score"
+              ],
+              "title": "Evidence",
+              "type": "object"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "sections": {
+            "anyOf": [
+              {
+                "items": {
+                  "enum": [
+                    "risk_factors",
+                    "mdna",
+                    "financial_statements"
+                  ],
+                  "title": "SectionName",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sections"
+          },
+          "top_k": {
+            "title": "Top K",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "evidence",
+          "accession_number",
+          "accession_resolved_from_manifest",
+          "sections",
+          "top_k",
+          "embedding_model",
+          "embedding_model_sha256"
+        ],
+        "title": "SearchFilingChunksOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "Compute a supported structured metric from verified companyfacts for the pinned accession; numbers must come from this tool rather than retrieved text, and unavailable facts return typed errors.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "accession_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Accession Number"
+          },
+          "company": {
+            "minLength": 1,
+            "title": "Company",
+            "type": "string"
+          },
+          "fiscal_year": {
+            "title": "Fiscal Year",
+            "type": "integer"
+          },
+          "metric": {
+            "enum": [
+              "revenue",
+              "revenue_growth_yoy",
+              "operating_margin",
+              "net_margin",
+              "free_cash_flow",
+              "current_ratio"
+            ],
+            "title": "Metric",
+            "type": "string"
+          }
+        },
+        "required": [
+          "metric",
+          "company",
+          "fiscal_year"
+        ],
+        "title": "CalculateFinancialMetricInput",
+        "type": "object"
+      },
+      "name": "calculate_financial_metric",
+      "output_schema": {
+        "properties": {
+          "accession_number": {
+            "title": "Accession Number",
+            "type": "string"
+          },
+          "accession_resolved_from_manifest": {
+            "title": "Accession Resolved From Manifest",
+            "type": "boolean"
+          },
+          "cik": {
+            "title": "Cik",
+            "type": "string"
+          },
+          "companyfacts_sha256": {
+            "title": "Companyfacts Sha256",
+            "type": "string"
+          },
+          "fiscal_year": {
+            "title": "Fiscal Year",
+            "type": "integer"
+          },
+          "metric_evidence_id": {
+            "default": "",
+            "title": "Metric Evidence Id",
+            "type": "string"
+          },
+          "result": {
+            "properties": {
+              "display_value": {
+                "title": "Display Value",
+                "type": "string"
+              },
+              "evidence_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Evidence Ids",
+                "type": "array"
+              },
+              "formula": {
+                "title": "Formula",
+                "type": "string"
+              },
+              "inputs": {
+                "items": {
+                  "properties": {
+                    "accession_number": {
+                      "title": "Accession Number",
+                      "type": "string"
+                    },
+                    "cik": {
+                      "title": "Cik",
+                      "type": "string"
+                    },
+                    "filed_at": {
+                      "format": "date",
+                      "title": "Filed At",
+                      "type": "string"
+                    },
+                    "fiscal_period": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Fiscal Period"
+                    },
+                    "fiscal_year": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Fiscal Year"
+                    },
+                    "form": {
+                      "title": "Form",
+                      "type": "string"
+                    },
+                    "frame": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Frame"
+                    },
+                    "label": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Label"
+                    },
+                    "period_end": {
+                      "format": "date",
+                      "title": "Period End",
+                      "type": "string"
+                    },
+                    "period_start": {
+                      "anyOf": [
+                        {
+                          "format": "date",
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Period Start"
+                    },
+                    "source_url": {
+                      "format": "uri",
+                      "maxLength": 2083,
+                      "minLength": 1,
+                      "title": "Source Url",
+                      "type": "string"
+                    },
+                    "tag": {
+                      "title": "Tag",
+                      "type": "string"
+                    },
+                    "taxonomy": {
+                      "title": "Taxonomy",
+                      "type": "string"
+                    },
+                    "ticker": {
+                      "title": "Ticker",
+                      "type": "string"
+                    },
+                    "unit": {
+                      "title": "Unit",
+                      "type": "string"
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                          "type": "string"
+                        }
+                      ],
+                      "title": "Value"
+                    }
+                  },
+                  "required": [
+                    "ticker",
+                    "cik",
+                    "taxonomy",
+                    "tag",
+                    "label",
+                    "value",
+                    "unit",
+                    "period_start",
+                    "period_end",
+                    "fiscal_year",
+                    "fiscal_period",
+                    "form",
+                    "filed_at",
+                    "accession_number",
+                    "frame",
+                    "source_url"
+                  ],
+                  "title": "FinancialFact",
+                  "type": "object"
+                },
+                "title": "Inputs",
+                "type": "array"
+              },
+              "metric": {
+                "title": "Metric",
+                "type": "string"
+              },
+              "period_end": {
+                "format": "date",
+                "title": "Period End",
+                "type": "string"
+              },
+              "period_start": {
+                "anyOf": [
+                  {
+                    "format": "date",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Period Start"
+              },
+              "result": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                    "type": "string"
+                  }
+                ],
+                "title": "Result"
+              },
+              "result_unit": {
+                "title": "Result Unit",
+                "type": "string"
+              }
+            },
+            "required": [
+              "metric",
+              "formula",
+              "inputs",
+              "result",
+              "result_unit",
+              "display_value",
+              "period_start",
+              "period_end",
+              "evidence_ids"
+            ],
+            "title": "MetricResult",
+            "type": "object"
+          },
+          "source_url": {
+            "title": "Source Url",
+            "type": "string"
+          },
+          "ticker": {
+            "title": "Ticker",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result",
+          "ticker",
+          "cik",
+          "accession_number",
+          "accession_resolved_from_manifest",
+          "fiscal_year",
+          "source_url",
+          "companyfacts_sha256"
+        ],
+        "title": "CalculateFinancialMetricOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "Compare structured metrics across fiscal years within one pinned accession; values are calculated by calculate_financial_metric, never retrieved text, and missing years return typed errors without partial values.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "accession_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Accession Number"
+          },
+          "company": {
+            "minLength": 1,
+            "title": "Company",
+            "type": "string"
+          },
+          "fiscal_year_a": {
+            "title": "Fiscal Year A",
+            "type": "integer"
+          },
+          "fiscal_year_b": {
+            "title": "Fiscal Year B",
+            "type": "integer"
+          },
+          "metrics": {
+            "items": {
+              "enum": [
+                "revenue",
+                "revenue_growth_yoy",
+                "operating_margin",
+                "net_margin",
+                "free_cash_flow",
+                "current_ratio"
+              ],
+              "title": "Metric",
+              "type": "string"
+            },
+            "maxItems": 6,
+            "minItems": 1,
+            "title": "Metrics",
+            "type": "array"
+          }
+        },
+        "required": [
+          "company",
+          "fiscal_year_a",
+          "fiscal_year_b",
+          "metrics"
+        ],
+        "title": "ComparePeriodsInput",
+        "type": "object"
+      },
+      "name": "compare_periods",
+      "output_schema": {
+        "properties": {
+          "accession_number": {
+            "title": "Accession Number",
+            "type": "string"
+          },
+          "company": {
+            "title": "Company",
+            "type": "string"
+          },
+          "fiscal_year_a": {
+            "title": "Fiscal Year A",
+            "type": "integer"
+          },
+          "fiscal_year_b": {
+            "title": "Fiscal Year B",
+            "type": "integer"
+          },
+          "rows": {
+            "items": {
+              "properties": {
+                "absolute_change": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Absolute Change"
+                },
+                "change_display": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Change Display"
+                },
+                "error": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "code": {
+                          "title": "Code",
+                          "type": "string"
+                        },
+                        "message": {
+                          "title": "Message",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "title": "CompareError",
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "formula": {
+                  "title": "Formula",
+                  "type": "string"
+                },
+                "metric": {
+                  "title": "Metric",
+                  "type": "string"
+                },
+                "metric_evidence_id_a": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Metric Evidence Id A"
+                },
+                "metric_evidence_id_b": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Metric Evidence Id B"
+                },
+                "percentage_change": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Percentage Change"
+                },
+                "percentage_change_error": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "code": {
+                          "title": "Code",
+                          "type": "string"
+                        },
+                        "message": {
+                          "title": "Message",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "title": "CompareError",
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "percentage_change_reason": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Percentage Change Reason"
+                },
+                "result_unit": {
+                  "title": "Result Unit",
+                  "type": "string"
+                },
+                "value_a": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "display_value": {
+                          "title": "Display Value",
+                          "type": "string"
+                        },
+                        "evidence_ids": {
+                          "items": {
+                            "type": "string"
+                          },
+                          "title": "Evidence Ids",
+                          "type": "array"
+                        },
+                        "formula": {
+                          "title": "Formula",
+                          "type": "string"
+                        },
+                        "inputs": {
+                          "items": {
+                            "properties": {
+                              "accession_number": {
+                                "title": "Accession Number",
+                                "type": "string"
+                              },
+                              "cik": {
+                                "title": "Cik",
+                                "type": "string"
+                              },
+                              "filed_at": {
+                                "format": "date",
+                                "title": "Filed At",
+                                "type": "string"
+                              },
+                              "fiscal_period": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Fiscal Period"
+                              },
+                              "fiscal_year": {
+                                "anyOf": [
+                                  {
+                                    "type": "integer"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Fiscal Year"
+                              },
+                              "form": {
+                                "title": "Form",
+                                "type": "string"
+                              },
+                              "frame": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Frame"
+                              },
+                              "label": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Label"
+                              },
+                              "period_end": {
+                                "format": "date",
+                                "title": "Period End",
+                                "type": "string"
+                              },
+                              "period_start": {
+                                "anyOf": [
+                                  {
+                                    "format": "date",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Period Start"
+                              },
+                              "source_url": {
+                                "format": "uri",
+                                "maxLength": 2083,
+                                "minLength": 1,
+                                "title": "Source Url",
+                                "type": "string"
+                              },
+                              "tag": {
+                                "title": "Tag",
+                                "type": "string"
+                              },
+                              "taxonomy": {
+                                "title": "Taxonomy",
+                                "type": "string"
+                              },
+                              "ticker": {
+                                "title": "Ticker",
+                                "type": "string"
+                              },
+                              "unit": {
+                                "title": "Unit",
+                                "type": "string"
+                              },
+                              "value": {
+                                "anyOf": [
+                                  {
+                                    "type": "number"
+                                  },
+                                  {
+                                    "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                    "type": "string"
+                                  }
+                                ],
+                                "title": "Value"
+                              }
+                            },
+                            "required": [
+                              "ticker",
+                              "cik",
+                              "taxonomy",
+                              "tag",
+                              "label",
+                              "value",
+                              "unit",
+                              "period_start",
+                              "period_end",
+                              "fiscal_year",
+                              "fiscal_period",
+                              "form",
+                              "filed_at",
+                              "accession_number",
+                              "frame",
+                              "source_url"
+                            ],
+                            "title": "FinancialFact",
+                            "type": "object"
+                          },
+                          "title": "Inputs",
+                          "type": "array"
+                        },
+                        "metric": {
+                          "title": "Metric",
+                          "type": "string"
+                        },
+                        "period_end": {
+                          "format": "date",
+                          "title": "Period End",
+                          "type": "string"
+                        },
+                        "period_start": {
+                          "anyOf": [
+                            {
+                              "format": "date",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Period Start"
+                        },
+                        "result": {
+                          "anyOf": [
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                              "type": "string"
+                            }
+                          ],
+                          "title": "Result"
+                        },
+                        "result_unit": {
+                          "title": "Result Unit",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "metric",
+                        "formula",
+                        "inputs",
+                        "result",
+                        "result_unit",
+                        "display_value",
+                        "period_start",
+                        "period_end",
+                        "evidence_ids"
+                      ],
+                      "title": "MetricResult",
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "value_b": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "display_value": {
+                          "title": "Display Value",
+                          "type": "string"
+                        },
+                        "evidence_ids": {
+                          "items": {
+                            "type": "string"
+                          },
+                          "title": "Evidence Ids",
+                          "type": "array"
+                        },
+                        "formula": {
+                          "title": "Formula",
+                          "type": "string"
+                        },
+                        "inputs": {
+                          "items": {
+                            "properties": {
+                              "accession_number": {
+                                "title": "Accession Number",
+                                "type": "string"
+                              },
+                              "cik": {
+                                "title": "Cik",
+                                "type": "string"
+                              },
+                              "filed_at": {
+                                "format": "date",
+                                "title": "Filed At",
+                                "type": "string"
+                              },
+                              "fiscal_period": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Fiscal Period"
+                              },
+                              "fiscal_year": {
+                                "anyOf": [
+                                  {
+                                    "type": "integer"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Fiscal Year"
+                              },
+                              "form": {
+                                "title": "Form",
+                                "type": "string"
+                              },
+                              "frame": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Frame"
+                              },
+                              "label": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Label"
+                              },
+                              "period_end": {
+                                "format": "date",
+                                "title": "Period End",
+                                "type": "string"
+                              },
+                              "period_start": {
+                                "anyOf": [
+                                  {
+                                    "format": "date",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Period Start"
+                              },
+                              "source_url": {
+                                "format": "uri",
+                                "maxLength": 2083,
+                                "minLength": 1,
+                                "title": "Source Url",
+                                "type": "string"
+                              },
+                              "tag": {
+                                "title": "Tag",
+                                "type": "string"
+                              },
+                              "taxonomy": {
+                                "title": "Taxonomy",
+                                "type": "string"
+                              },
+                              "ticker": {
+                                "title": "Ticker",
+                                "type": "string"
+                              },
+                              "unit": {
+                                "title": "Unit",
+                                "type": "string"
+                              },
+                              "value": {
+                                "anyOf": [
+                                  {
+                                    "type": "number"
+                                  },
+                                  {
+                                    "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                    "type": "string"
+                                  }
+                                ],
+                                "title": "Value"
+                              }
+                            },
+                            "required": [
+                              "ticker",
+                              "cik",
+                              "taxonomy",
+                              "tag",
+                              "label",
+                              "value",
+                              "unit",
+                              "period_start",
+                              "period_end",
+                              "fiscal_year",
+                              "fiscal_period",
+                              "form",
+                              "filed_at",
+                              "accession_number",
+                              "frame",
+                              "source_url"
+                            ],
+                            "title": "FinancialFact",
+                            "type": "object"
+                          },
+                          "title": "Inputs",
+                          "type": "array"
+                        },
+                        "metric": {
+                          "title": "Metric",
+                          "type": "string"
+                        },
+                        "period_end": {
+                          "format": "date",
+                          "title": "Period End",
+                          "type": "string"
+                        },
+                        "period_start": {
+                          "anyOf": [
+                            {
+                              "format": "date",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Period Start"
+                        },
+                        "result": {
+                          "anyOf": [
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                              "type": "string"
+                            }
+                          ],
+                          "title": "Result"
+                        },
+                        "result_unit": {
+                          "title": "Result Unit",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "metric",
+                        "formula",
+                        "inputs",
+                        "result",
+                        "result_unit",
+                        "display_value",
+                        "period_start",
+                        "period_end",
+                        "evidence_ids"
+                      ],
+                      "title": "MetricResult",
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "metric",
+                "formula",
+                "result_unit",
+                "value_a",
+                "value_b",
+                "absolute_change",
+                "percentage_change",
+                "change_display",
+                "error"
+              ],
+              "title": "CompareRow",
+              "type": "object"
+            },
+            "title": "Rows",
+            "type": "array"
+          }
+        },
+        "required": [
+          "company",
+          "accession_number",
+          "fiscal_year_a",
+          "fiscal_year_b",
+          "rows"
+        ],
+        "title": "ComparePeriodsOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "Checks evidence IDs, hashes, metadata, and numeric assertions deterministically first; narrative claims are judged by the configured judge. Relevance is not support. Unsupported claims must be removed or reworded, never presented as fact. Evidence IDs are process-local and resolve as evidence_not_found after a server restart.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "attempt": {
+            "default": 1,
+            "minimum": 1,
+            "title": "Attempt",
+            "type": "integer"
+          },
+          "claims": {
+            "items": {
+              "properties": {
+                "claim_id": {
+                  "title": "Claim Id",
+                  "type": "string"
+                },
+                "claim_text": {
+                  "title": "Claim Text",
+                  "type": "string"
+                },
+                "claim_type": {
+                  "enum": [
+                    "numeric",
+                    "metadata",
+                    "narrative"
+                  ],
+                  "title": "Claim Type",
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "title": "Evidence Ids",
+                  "type": "array"
+                },
+                "metadata": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "field": {
+                          "enum": [
+                            "accession_number",
+                            "filing_date",
+                            "report_date",
+                            "form",
+                            "ticker",
+                            "cik"
+                          ],
+                          "title": "Field",
+                          "type": "string"
+                        },
+                        "value": {
+                          "title": "Value",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "field",
+                        "value"
+                      ],
+                      "title": "MetadataAssertion",
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "numeric": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "period_end": {
+                          "format": "date",
+                          "title": "Period End",
+                          "type": "string"
+                        },
+                        "period_start": {
+                          "anyOf": [
+                            {
+                              "format": "date",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "default": null,
+                          "title": "Period Start"
+                        },
+                        "scale": {
+                          "default": "units",
+                          "enum": [
+                            "units",
+                            "thousands",
+                            "millions",
+                            "billions"
+                          ],
+                          "title": "Scale",
+                          "type": "string"
+                        },
+                        "unit": {
+                          "enum": [
+                            "USD",
+                            "percent",
+                            "ratio"
+                          ],
+                          "title": "Unit",
+                          "type": "string"
+                        },
+                        "value": {
+                          "anyOf": [
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                              "type": "string"
+                            }
+                          ],
+                          "title": "Value"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "unit",
+                        "period_end"
+                      ],
+                      "title": "NumericAssertion",
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "ticker": {
+                  "title": "Ticker",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "claim_id",
+                "claim_text",
+                "claim_type",
+                "ticker",
+                "evidence_ids"
+              ],
+              "title": "Claim",
+              "type": "object"
+            },
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Claims",
+            "type": "array"
+          },
+          "parent_draft_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Parent Draft Id"
+          },
+          "ticker": {
+            "minLength": 1,
+            "title": "Ticker",
+            "type": "string"
+          }
+        },
+        "required": [
+          "claims",
+          "ticker"
+        ],
+        "title": "VerifyCitationsInput",
+        "type": "object"
+      },
+      "name": "verify_citations",
+      "output_schema": {
+        "properties": {
+          "final_answer_markdown": {
+            "title": "Final Answer Markdown",
+            "type": "string"
+          },
+          "is_final": {
+            "title": "Is Final",
+            "type": "boolean"
+          },
+          "judge_observations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Judge Observations",
+            "type": "array"
+          },
+          "report": {
+            "properties": {
+              "judge_id": {
+                "title": "Judge Id",
+                "type": "string"
+              },
+              "partially_supported": {
+                "title": "Partially Supported",
+                "type": "integer"
+              },
+              "supported": {
+                "title": "Supported",
+                "type": "integer"
+              },
+              "unsupported": {
+                "title": "Unsupported",
+                "type": "integer"
+              },
+              "unsupported_rate": {
+                "title": "Unsupported Rate",
+                "type": "number"
+              },
+              "verifications": {
+                "items": {
+                  "properties": {
+                    "claim_id": {
+                      "title": "Claim Id",
+                      "type": "string"
+                    },
+                    "claim_text": {
+                      "title": "Claim Text",
+                      "type": "string"
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "numeric",
+                        "metadata",
+                        "narrative"
+                      ],
+                      "title": "Claim Type",
+                      "type": "string"
+                    },
+                    "deterministic_checks": {
+                      "additionalProperties": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "title": "Deterministic Checks",
+                      "type": "object"
+                    },
+                    "evidence_ids": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "title": "Evidence Ids",
+                      "type": "array"
+                    },
+                    "reason": {
+                      "title": "Reason",
+                      "type": "string"
+                    },
+                    "semantic_score": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Semantic Score"
+                    },
+                    "verdict": {
+                      "enum": [
+                        "supported",
+                        "partially_supported",
+                        "unsupported"
+                      ],
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "claim_id",
+                    "claim_text",
+                    "claim_type",
+                    "evidence_ids",
+                    "verdict",
+                    "deterministic_checks",
+                    "semantic_score",
+                    "reason"
+                  ],
+                  "title": "ClaimVerification",
+                  "type": "object"
+                },
+                "title": "Verifications",
+                "type": "array"
+              }
+            },
+            "required": [
+              "verifications",
+              "supported",
+              "partially_supported",
+              "unsupported",
+              "unsupported_rate",
+              "judge_id"
+            ],
+            "title": "VerificationReport",
+            "type": "object"
+          },
+          "report_draft_id": {
+            "title": "Report Draft Id",
+            "type": "string"
+          },
+          "retry_allowed": {
+            "title": "Retry Allowed",
+            "type": "boolean"
+          },
+          "retry_guidance": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retry Guidance"
+          }
+        },
+        "required": [
+          "report",
+          "report_draft_id",
+          "final_answer_markdown",
+          "retry_allowed",
+          "retry_guidance",
+          "is_final"
+        ],
+        "title": "VerifyCitationsOutput",
+        "type": "object"
+      },
+      "status": "implemented"
+    },
+    {
+      "description": "Preview and write a report containing supported claims and labelled partial claims. Unsupported claims are omitted unless explicitly acknowledged in the Removed appendix. The Pi extension must obtain ctx.ui.confirm() between preview and write; direct calls cannot bypass preview/confirmation.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "acknowledge_unsupported": {
+            "default": false,
+            "title": "Acknowledge Unsupported",
+            "type": "boolean"
+          },
+          "format": {
+            "enum": [
+              "markdown",
+              "html"
+            ],
+            "title": "Format",
+            "type": "string"
+          },
+          "output_path": {
+            "title": "Output Path",
+            "type": "string"
+          },
+          "report_draft_id": {
+            "minLength": 1,
+            "title": "Report Draft Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "report_draft_id",
+          "format",
+          "output_path"
+        ],
+        "title": "ExportResearchReportInput",
+        "type": "object"
+      },
+      "name": "export_research_report",
+      "output_schema": {
+        "properties": {
+          "content_sha256": {
+            "title": "Content Sha256",
+            "type": "string"
+          },
+          "evidence_count": {
+            "title": "Evidence Count",
+            "type": "integer"
+          },
+          "format": {
+            "enum": [
+              "markdown",
+              "html"
+            ],
+            "title": "Format",
+            "type": "string"
+          },
+          "output_path": {
+            "title": "Output Path",
+            "type": "string"
+          },
+          "partially_supported_claim_count": {
+            "title": "Partially Supported Claim Count",
+            "type": "integer"
+          },
+          "preview_text": {
+            "title": "Preview Text",
+            "type": "string"
+          },
+          "report_draft_id": {
+            "title": "Report Draft Id",
+            "type": "string"
+          },
+          "requires_unsupported_acknowledgement": {
+            "title": "Requires Unsupported Acknowledgement",
+            "type": "boolean"
+          },
+          "supported_claim_count": {
+            "title": "Supported Claim Count",
+            "type": "integer"
+          },
+          "unsupported_claim_count": {
+            "title": "Unsupported Claim Count",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "report_draft_id",
+          "format",
+          "output_path",
+          "content_sha256",
+          "supported_claim_count",
+          "partially_supported_claim_count",
+          "unsupported_claim_count",
+          "evidence_count",
+          "preview_text",
+          "requires_unsupported_acknowledgement"
+        ],
+        "title": "ExportResearchReportPreview",
+        "type": "object"
+      },
+      "status": "implemented"
+    }
+  ]
+}

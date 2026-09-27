@@ -1,0 +1,6 @@
+{
+  "tool_calls": [
+    {"name": "calculate_financial_metric", "args": {"metric": "revenue_growth_yoy", "company": "AAPL", "fiscal_year": 2025}}
+  ],
+  "final_assistant_text": "Apple's revenue grew 6.4% in fiscal 2025."
+}

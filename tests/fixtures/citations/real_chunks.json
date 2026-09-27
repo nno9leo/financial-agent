@@ -1,0 +1,80 @@
+[
+  {
+    "accession_number": "0000320193-25-000079",
+    "canonical_sha256": "d585222570ac26452aee069ea6e9fb069d59929b3c5c92a802b565bc9d2a6ee1",
+    "chunk_id": "0000320193-25-000079:mdna:0007",
+    "chunk_type": "text",
+    "chunker_version": "chunker/1",
+    "cik": "0000320193",
+    "content_hash": "9cb8bba4d36206e54b339ead2bb3173924f379795e91ee81a95edbf0e7a0ed52",
+    "end_offset": 110257,
+    "evidence_id": "ev_426b275bb4fd862c5317",
+    "extractor_version": "html_text/1",
+    "filing_date": "2025-10-31",
+    "filing_form": "10-K",
+    "heading_path": [
+      "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+      "Gross Margin"
+    ],
+    "page_number": null,
+    "section": "mdna",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "start_offset": 109272,
+    "table_context": null,
+    "text": "(1)Services net sales include amortization of the deferred value of services bundled in the sales price of certain products.\niPhone\niPhone net sales increased during 2025 compared to 2024 due to higher net sales of Pro models.\nMac\nMac net sales increased during 2025 compared to 2024 primarily due to higher net sales of laptops and desktops.\niPad\niPad net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPad Air, iPad mini and iPad, partially offset by lower net sales of iPad Pro.\nWearables, Home and Accessories\nWearables, Home and Accessories net sales decreased during 2025 compared to 2024 primarily due to lower net sales of Accessories and Wearables.\nServices\nServices net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the App Store and cloud services.\nGross Margin\nProducts and Services gross margin and gross margin percentage for 2025, 2024 and 2023 were as follows (dollars in millions):",
+    "ticker": "AAPL",
+    "token_count": 206
+  },
+  {
+    "accession_number": "0000320193-25-000079",
+    "canonical_sha256": "d585222570ac26452aee069ea6e9fb069d59929b3c5c92a802b565bc9d2a6ee1",
+    "chunk_id": "0000320193-25-000079:risk_factors:0005",
+    "chunk_type": "text",
+    "chunker_version": "chunker/1",
+    "cik": "0000320193",
+    "content_hash": "13d8681415d3911d0acb066beacb6fcd95fb45a39ff29ee7d353f9645f893d5c",
+    "end_offset": 33099,
+    "evidence_id": "ev_e777a0715850dc81ab53",
+    "extractor_version": "html_text/1",
+    "filing_date": "2025-10-31",
+    "filing_form": "10-K",
+    "heading_path": [
+      "Item 1A. Risk Factors",
+      "Macroeconomic and Industry Risks"
+    ],
+    "page_number": null,
+    "section": "risk_factors",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "start_offset": 31963,
+    "table_context": null,
+    "text": "Many of the Company\u2019s operations, retail stores and facilities, as well as critical business operations of the Company\u2019s suppliers and contract manufacturers, are in locations that are prone to earthquakes and other natural disasters. Global climate change is resulting in certain types of natural disasters and extreme weather occurring more frequently or with more intense effects. In addition, the Company\u2019s and its suppliers\u2019 operations, retail stores and facilities are subject to the risk of interruption by fire, power shortages, nuclear power plant accidents and other industrial accidents, terrorist attacks and other hostile acts, ransomware and other cybersecurity attacks, labor disputes, public health issues and other events beyond the Company\u2019s control.\nSuch events can make it difficult or impossible for the Company to manufacture and deliver products to its customers, create delays and inefficiencies in the Company\u2019s supply and manufacturing chain, result in slowdowns and outages to the Company\u2019s service offerings, increase the Company\u2019s costs, and negatively impact consumer spending and demand in affected areas.",
+    "ticker": "AAPL",
+    "token_count": 211
+  },
+  {
+    "accession_number": "0001193125-26-323660",
+    "canonical_sha256": "ae62ceff4d5eb49b8f8ef3e04dde60aa70784f07df2f697704d3b8fcbb86c1e1",
+    "chunk_id": "0001193125-26-323660:mdna:0014",
+    "chunk_type": "text",
+    "chunker_version": "chunker/1",
+    "cik": "0000789019",
+    "content_hash": "b2b5d53f3c4966ed3fc347da48d37f4a05949a128b078144456fd3ce9b051c2a",
+    "end_offset": 155311,
+    "evidence_id": "ev_fffbd37ac73dbe0a73f2",
+    "extractor_version": "html_text/1",
+    "filing_date": "2026-07-29",
+    "filing_form": "10-K",
+    "heading_path": [
+      "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+      "Fiscal Year 2026 Compared with Fiscal Year 2025"
+    ],
+    "page_number": null,
+    "section": "mdna",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+    "start_offset": 153416,
+    "table_context": null,
+    "text": "Adjusted net income and adjusted diluted earnings per share (\u201cEPS\u201d) are non-GAAP financial measures. These non-GAAP financial measures exclude net gains and losses from investments in OpenAI. Refer to the Non-GAAP Financial Measures section below for a reconciliation of our financial results reported in accordance with GAAP to non-GAAP financial results.\nFiscal Year 2026 Compared with Fiscal Year 2025\nRevenue increased $50.1 billion or 18% driven by growth in Microsoft Cloud. Intelligent Cloud revenue increased driven by Azure. Productivity and Business Processes revenue increased driven by Microsoft 365 Commercial cloud. More Personal Computing revenue decreased driven by XBOX (formerly Gaming), offset in part by growth in Search advertising.\nCost of revenue increased $18.5 billion or 21% driven by growth in Microsoft Cloud.\nGross margin increased $31.6 billion or 16% with growth across each of our segments.\n\u2022\nGross margin percentage decreased slightly driven by continued investments in AI infrastructure and growing AI product usage, offset in part by efficiency gains across the Microsoft Cloud.\n\u2022\nMicrosoft Cloud gross margin percentage decreased to 66% driven by continued investments in AI infrastructure and growing AI product usage, offset in part by efficiency gains in Azure and Microsoft 365 Commercial cloud.\nOperating expenses increased $4.9 billion or 7% driven by continued investments in research and development compute capacity, AI talent, and data to support product development that benefits the entire portfolio, impairment and other related expenses in our XBOX business, investments in commercial sales, and higher Copilot advertising expenses.\nOperating income increased $26.7 billion or 21% driven by growth in Productivity and Business Processes and Intelligent Cloud.\nRevenue and operating income both included a favorable foreign currency impact of 2%.",
+    "ticker": "MSFT",
+    "token_count": 348
+  }
+]

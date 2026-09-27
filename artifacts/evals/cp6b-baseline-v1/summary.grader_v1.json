@@ -1,0 +1,827 @@
+{
+  "agent": "pi",
+  "by_question_type": {
+    "comparison": {
+      "citation_coverage": {
+        "n_claims": 4,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 2
+      },
+      "cost_judge_usd": {
+        "mean": 0.0,
+        "n": 2
+      },
+      "cost_pi_usd": {
+        "mean": 0.035512749999999996,
+        "n": 2
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 0,
+        "no_calculator": 0,
+        "refusal_missing": 0,
+        "retrieval_miss": 0,
+        "runtime_error": 0,
+        "schema_error": 0,
+        "unsupported_claim": 2,
+        "wrong_tool": 0
+      },
+      "items": 2,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 30.14561002800474,
+      "latency_p95_s": 36.105459059996065,
+      "latency_s": {
+        "mean": 33.1255345440004,
+        "n": 2
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 2
+      },
+      "narrative_key_points_proxy": {
+        "mean": null,
+        "n": 0
+      },
+      "numeric_correct": {
+        "mean": 1.0,
+        "n": 2
+      },
+      "partial_claim_rate": {
+        "mean": 0.0,
+        "n": 2
+      },
+      "refusal_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "retrieval_hit_at_k": {
+        "mean": null,
+        "n": 0
+      },
+      "tokens_in": {
+        "mean": 13.0,
+        "n": 2
+      },
+      "tokens_out": {
+        "mean": 1921.0,
+        "n": 2
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 2
+      },
+      "total_cost_usd": 0.07102549999999999,
+      "unsupported_claim_rate": {
+        "n_claims": 4,
+        "rate": 1.0
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 1.0,
+        "n": 2
+      }
+    },
+    "failure": {
+      "citation_coverage": {
+        "n_claims": 0,
+        "rate": null
+      },
+      "citation_coverage_item_mean": {
+        "mean": null,
+        "n": 0
+      },
+      "cost_judge_usd": {
+        "mean": 0.0,
+        "n": 3
+      },
+      "cost_pi_usd": {
+        "mean": 0.020167,
+        "n": 3
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 0,
+        "no_calculator": 0,
+        "refusal_missing": 1,
+        "retrieval_miss": 0,
+        "runtime_error": 1,
+        "schema_error": 0,
+        "unsupported_claim": 0,
+        "wrong_tool": 0
+      },
+      "items": 3,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 13.305498650996014,
+      "latency_p95_s": 30.386584421998123,
+      "latency_s": {
+        "mean": 16.654465863660636,
+        "n": 3
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 3
+      },
+      "narrative_key_points_proxy": {
+        "mean": null,
+        "n": 0
+      },
+      "numeric_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "partial_claim_rate": {
+        "mean": null,
+        "n": 0
+      },
+      "refusal_correct": {
+        "mean": 0.6666666666666666,
+        "n": 3
+      },
+      "retrieval_hit_at_k": {
+        "mean": null,
+        "n": 0
+      },
+      "tokens_in": {
+        "mean": 10.666666666666666,
+        "n": 3
+      },
+      "tokens_out": {
+        "mean": 1157.6666666666667,
+        "n": 3
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 3
+      },
+      "total_cost_usd": 0.060501000000000006,
+      "unsupported_claim_rate": {
+        "n_claims": 0,
+        "rate": null
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": null,
+        "n": 0
+      }
+    },
+    "metadata": {
+      "citation_coverage": {
+        "n_claims": 1,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 1
+      },
+      "cost_judge_usd": {
+        "mean": 0.0,
+        "n": 1
+      },
+      "cost_pi_usd": {
+        "mean": 0.0237808,
+        "n": 1
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 0,
+        "no_calculator": 0,
+        "refusal_missing": 0,
+        "retrieval_miss": 0,
+        "runtime_error": 0,
+        "schema_error": 0,
+        "unsupported_claim": 0,
+        "wrong_tool": 0
+      },
+      "items": 1,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 18.283595294997212,
+      "latency_p95_s": 18.283595294997212,
+      "latency_s": {
+        "mean": 18.283595294997212,
+        "n": 1
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 1
+      },
+      "narrative_key_points_proxy": {
+        "mean": null,
+        "n": 0
+      },
+      "numeric_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "partial_claim_rate": {
+        "mean": 0.0,
+        "n": 1
+      },
+      "refusal_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "retrieval_hit_at_k": {
+        "mean": null,
+        "n": 0
+      },
+      "tokens_in": {
+        "mean": 12.0,
+        "n": 1
+      },
+      "tokens_out": {
+        "mean": 996.0,
+        "n": 1
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 1
+      },
+      "total_cost_usd": 0.0237808,
+      "unsupported_claim_rate": {
+        "n_claims": 1,
+        "rate": 0.0
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 0.0,
+        "n": 1
+      }
+    },
+    "mixed": {
+      "citation_coverage": {
+        "n_claims": 9,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 3
+      },
+      "cost_judge_usd": {
+        "mean": 0.007755333333333333,
+        "n": 3
+      },
+      "cost_pi_usd": {
+        "mean": 0.04239356666666667,
+        "n": 3
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 3,
+        "no_calculator": 0,
+        "refusal_missing": 0,
+        "retrieval_miss": 1,
+        "runtime_error": 0,
+        "schema_error": 0,
+        "unsupported_claim": 3,
+        "wrong_tool": 0
+      },
+      "items": 3,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 39.55320474499604,
+      "latency_p95_s": 47.52734605400474,
+      "latency_s": {
+        "mean": 36.27613996900133,
+        "n": 3
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 3
+      },
+      "narrative_key_points_proxy": {
+        "mean": 1.0,
+        "n": 3
+      },
+      "numeric_correct": {
+        "mean": 0.0,
+        "n": 3
+      },
+      "partial_claim_rate": {
+        "mean": 0.0,
+        "n": 3
+      },
+      "refusal_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "retrieval_hit_at_k": {
+        "mean": 0.6666666666666666,
+        "n": 3
+      },
+      "tokens_in": {
+        "mean": 1523.0,
+        "n": 3
+      },
+      "tokens_out": {
+        "mean": 2661.6666666666665,
+        "n": 3
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 3
+      },
+      "total_cost_usd": 0.1504467,
+      "unsupported_claim_rate": {
+        "n_claims": 9,
+        "rate": 0.3333333333333333
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 0.3611111111111111,
+        "n": 3
+      }
+    },
+    "narrative": {
+      "citation_coverage": {
+        "n_claims": 24,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 7
+      },
+      "cost_judge_usd": {
+        "mean": 0.012231,
+        "n": 8
+      },
+      "cost_pi_usd": {
+        "mean": 0.0547613875,
+        "n": 8
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 0,
+        "no_calculator": 0,
+        "refusal_missing": 0,
+        "retrieval_miss": 1,
+        "runtime_error": 6,
+        "schema_error": 0,
+        "unsupported_claim": 0,
+        "wrong_tool": 0
+      },
+      "items": 8,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 49.69159293400298,
+      "latency_p95_s": 300.01667688299494,
+      "latency_s": {
+        "mean": 76.49616765649989,
+        "n": 8
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 8
+      },
+      "narrative_key_points_proxy": {
+        "mean": 0.6875,
+        "n": 8
+      },
+      "numeric_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "partial_claim_rate": {
+        "mean": 0.30238095238095236,
+        "n": 7
+      },
+      "refusal_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "retrieval_hit_at_k": {
+        "mean": 0.875,
+        "n": 8
+      },
+      "tokens_in": {
+        "mean": 2702.625,
+        "n": 8
+      },
+      "tokens_out": {
+        "mean": 3428.25,
+        "n": 8
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 8
+      },
+      "total_cost_usd": 0.5359391000000001,
+      "unsupported_claim_rate": {
+        "n_claims": 24,
+        "rate": 0.0
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 0.0,
+        "n": 7
+      }
+    },
+    "numeric_failure": {
+      "citation_coverage": {
+        "n_claims": 0,
+        "rate": null
+      },
+      "citation_coverage_item_mean": {
+        "mean": null,
+        "n": 0
+      },
+      "cost_judge_usd": {
+        "mean": 0.0,
+        "n": 2
+      },
+      "cost_pi_usd": {
+        "mean": 0.0152165,
+        "n": 2
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 0,
+        "no_calculator": 0,
+        "refusal_missing": 2,
+        "retrieval_miss": 0,
+        "runtime_error": 2,
+        "schema_error": 0,
+        "unsupported_claim": 0,
+        "wrong_tool": 0
+      },
+      "items": 2,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 17.652041599998483,
+      "latency_p95_s": 22.57631414300704,
+      "latency_s": {
+        "mean": 20.11417787150276,
+        "n": 2
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 2
+      },
+      "narrative_key_points_proxy": {
+        "mean": null,
+        "n": 0
+      },
+      "numeric_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "partial_claim_rate": {
+        "mean": null,
+        "n": 0
+      },
+      "refusal_correct": {
+        "mean": 0.0,
+        "n": 2
+      },
+      "retrieval_hit_at_k": {
+        "mean": null,
+        "n": 0
+      },
+      "tokens_in": {
+        "mean": 9.0,
+        "n": 2
+      },
+      "tokens_out": {
+        "mean": 832.0,
+        "n": 2
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 2
+      },
+      "total_cost_usd": 0.030433,
+      "unsupported_claim_rate": {
+        "n_claims": 0,
+        "rate": null
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": null,
+        "n": 0
+      }
+    },
+    "numeric_lookup": {
+      "citation_coverage": {
+        "n_claims": 16,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 16
+      },
+      "cost_judge_usd": {
+        "mean": 0.0,
+        "n": 16
+      },
+      "cost_pi_usd": {
+        "mean": 0.01956323125,
+        "n": 16
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 13,
+        "no_calculator": 0,
+        "refusal_missing": 0,
+        "retrieval_miss": 0,
+        "runtime_error": 3,
+        "schema_error": 0,
+        "unsupported_claim": 12,
+        "wrong_tool": 0
+      },
+      "items": 16,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 15.65813445400272,
+      "latency_p95_s": 26.19851709700015,
+      "latency_s": {
+        "mean": 16.60370971937482,
+        "n": 16
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 16
+      },
+      "narrative_key_points_proxy": {
+        "mean": null,
+        "n": 0
+      },
+      "numeric_correct": {
+        "mean": 0.1875,
+        "n": 16
+      },
+      "partial_claim_rate": {
+        "mean": 0.0,
+        "n": 16
+      },
+      "refusal_correct": {
+        "mean": null,
+        "n": 0
+      },
+      "retrieval_hit_at_k": {
+        "mean": null,
+        "n": 0
+      },
+      "tokens_in": {
+        "mean": 10.75,
+        "n": 16
+      },
+      "tokens_out": {
+        "mean": 1013.4375,
+        "n": 16
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 16
+      },
+      "total_cost_usd": 0.3130117,
+      "unsupported_claim_rate": {
+        "n_claims": 16,
+        "rate": 0.75
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 0.75,
+        "n": 16
+      }
+    }
+  },
+  "by_split": {
+    "dev": {
+      "citation_coverage": {
+        "n_claims": 33,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 18
+      },
+      "cost_judge_usd": {
+        "mean": 0.00331,
+        "n": 23
+      },
+      "cost_pi_usd": {
+        "mean": 0.033114834782608696,
+        "n": 23
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 10,
+        "no_calculator": 0,
+        "refusal_missing": 2,
+        "retrieval_miss": 1,
+        "runtime_error": 9,
+        "schema_error": 0,
+        "unsupported_claim": 12,
+        "wrong_tool": 0
+      },
+      "items": 23,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 21.747869108003215,
+      "latency_p95_s": 61.387121370004024,
+      "latency_s": {
+        "mean": 38.303721002956,
+        "n": 23
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 23
+      },
+      "narrative_key_points_proxy": {
+        "mean": 0.6428571428571429,
+        "n": 7
+      },
+      "numeric_correct": {
+        "mean": 0.16666666666666666,
+        "n": 12
+      },
+      "partial_claim_rate": {
+        "mean": 0.10648148148148147,
+        "n": 18
+      },
+      "refusal_correct": {
+        "mean": 0.5,
+        "n": 4
+      },
+      "retrieval_hit_at_k": {
+        "mean": 0.8571428571428571,
+        "n": 7
+      },
+      "tokens_in": {
+        "mean": 767.9565217391304,
+        "n": 23
+      },
+      "tokens_out": {
+        "mean": 1890.2173913043478,
+        "n": 23
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 23
+      },
+      "total_cost_usd": 0.8377712000000002,
+      "unsupported_claim_rate": {
+        "n_claims": 33,
+        "rate": 0.42424242424242425
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 0.6296296296296297,
+        "n": 18
+      }
+    },
+    "holdout": {
+      "citation_coverage": {
+        "n_claims": 21,
+        "rate": 1.0
+      },
+      "citation_coverage_item_mean": {
+        "mean": 1.0,
+        "n": 11
+      },
+      "cost_judge_usd": {
+        "mean": 0.003748666666666666,
+        "n": 12
+      },
+      "cost_pi_usd": {
+        "mean": 0.02519855,
+        "n": 12
+      },
+      "cost_unknown_items": 0,
+      "error_taxonomy": {
+        "fact_selection": 6,
+        "no_calculator": 0,
+        "refusal_missing": 1,
+        "retrieval_miss": 1,
+        "runtime_error": 3,
+        "schema_error": 0,
+        "unsupported_claim": 5,
+        "wrong_tool": 0
+      },
+      "items": 12,
+      "items_with_provider_retries": 0,
+      "latency_p50_s": 18.484015281006577,
+      "latency_p95_s": 47.52734605400474,
+      "latency_s": {
+        "mean": 23.349829276499804,
+        "n": 12
+      },
+      "metadata_correct": {
+        "mean": 1.0,
+        "n": 12
+      },
+      "narrative_key_points_proxy": {
+        "mean": 1.0,
+        "n": 4
+      },
+      "numeric_correct": {
+        "mean": 0.3333333333333333,
+        "n": 9
+      },
+      "partial_claim_rate": {
+        "mean": 0.018181818181818184,
+        "n": 11
+      },
+      "refusal_correct": {
+        "mean": 0.0,
+        "n": 1
+      },
+      "retrieval_hit_at_k": {
+        "mean": 0.75,
+        "n": 4
+      },
+      "tokens_in": {
+        "mean": 732.25,
+        "n": 12
+      },
+      "tokens_out": {
+        "mean": 1510.5,
+        "n": 12
+      },
+      "tool_selection_correct": {
+        "mean": 1.0,
+        "n": 12
+      },
+      "total_cost_usd": 0.3473666,
+      "unsupported_claim_rate": {
+        "n_claims": 21,
+        "rate": 0.23809523809523808
+      },
+      "unsupported_claim_rate_item_mean": {
+        "mean": 0.3409090909090909,
+        "n": 11
+      }
+    }
+  },
+  "overall": {
+    "citation_coverage": {
+      "n_claims": 54,
+      "rate": 1.0
+    },
+    "citation_coverage_item_mean": {
+      "mean": 1.0,
+      "n": 29
+    },
+    "cost_judge_usd": {
+      "mean": 0.0034604,
+      "n": 35
+    },
+    "cost_pi_usd": {
+      "mean": 0.03040068,
+      "n": 35
+    },
+    "cost_unknown_items": 0,
+    "error_taxonomy": {
+      "fact_selection": 16,
+      "no_calculator": 0,
+      "refusal_missing": 3,
+      "retrieval_miss": 2,
+      "runtime_error": 12,
+      "schema_error": 0,
+      "unsupported_claim": 17,
+      "wrong_tool": 0
+    },
+    "items": 35,
+    "items_with_provider_retries": 0,
+    "latency_p50_s": 21.23152895500243,
+    "latency_p95_s": 55.610106262000045,
+    "latency_s": {
+      "mean": 33.176672411028164,
+      "n": 35
+    },
+    "metadata_correct": {
+      "mean": 1.0,
+      "n": 35
+    },
+    "narrative_key_points_proxy": {
+      "mean": 0.7727272727272727,
+      "n": 11
+    },
+    "numeric_correct": {
+      "mean": 0.23809523809523808,
+      "n": 21
+    },
+    "partial_claim_rate": {
+      "mean": 0.07298850574712644,
+      "n": 29
+    },
+    "refusal_correct": {
+      "mean": 0.4,
+      "n": 5
+    },
+    "retrieval_hit_at_k": {
+      "mean": 0.8181818181818182,
+      "n": 11
+    },
+    "tokens_in": {
+      "mean": 755.7142857142857,
+      "n": 35
+    },
+    "tokens_out": {
+      "mean": 1760.0285714285715,
+      "n": 35
+    },
+    "tool_selection_correct": {
+      "mean": 1.0,
+      "n": 35
+    },
+    "total_cost_usd": 1.1851377999999997,
+    "unsupported_claim_rate": {
+      "n_claims": 54,
+      "rate": 0.35185185185185186
+    },
+    "unsupported_claim_rate_item_mean": {
+      "mean": 0.5201149425287357,
+      "n": 29
+    }
+  }
+}

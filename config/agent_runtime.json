@@ -1,0 +1,70 @@
+{
+  "_note": "Single source of truth for the agent runtime model (ADR 0008). Eval runs must launch Pi with these values explicitly and record the model Pi actually reports in artifacts/evals/<run_id>/environment.json. A mismatch fails the run.",
+  "runtime": "pi",
+  "pi_version": "0.87.1",
+  "provider": "anthropic",
+  "model_id": "claude-sonnet-5",
+  "model_display_name": "Claude Sonnet 5",
+  "thinking_level": "medium",
+  "max_verify_attempts": 2,
+  "experiments": {
+    "derived_metric_render": "v2"
+  },
+  "eval_timeout_s": 300,
+  "eval_stall_idle_s": 120,
+  "eval_stall_retries": 1,
+  "eval_max_tool_calls": 30,
+  "pi_cli_args": [
+    "--model",
+    "anthropic/claude-sonnet-5",
+    "--thinking",
+    "medium"
+  ],
+  "selected_on": "2026-09-25",
+  "semantic_judge": {
+    "status": "selected (implementation pending)",
+    "gateway": "openrouter",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model_id": "openai/gpt-6-sol",
+    "model_display_name": "OpenAI: GPT-6 Sol (via OpenRouter)",
+    "reasoning_effort": "high",
+    "provider_routing": {
+      "order": [
+        "OpenAI"
+      ],
+      "allow_fallbacks": false
+    },
+    "response_format": "json_schema (label, score, rationale)",
+    "seed": 20260926,
+    "api_key_env": "OPENROUTER_API_KEY",
+    "selected_on": "2026-09-26",
+    "pricing_checked_2026_09_26": {
+      "prompt_usd_per_token": "0.000002",
+      "completion_usd_per_token": "0.00001"
+    },
+    "tests_and_demo_judge": "scripted-fake/1 (offline tests and the verifier demo only; never a measurement)",
+    "rejected_alternative": "Pi's ChatGPT OAuth login: it reuses a ChatGPT subscription's OAuth credentials for a third-party tool; no explicit OpenAI policy allows it; account risk."
+  },
+  "pi_tool_allowlist": [
+    "search_companies",
+    "list_filings",
+    "get_filing_section",
+    "search_filing_chunks",
+    "calculate_financial_metric",
+    "compare_periods",
+    "verify_citations",
+    "export_research_report"
+  ],
+  "pi_extension_path": ".pi/extensions/financial-research/index.ts",
+  "pi_isolation_args": [
+    "--tools",
+    "search_companies,list_filings,get_filing_section,search_filing_chunks,calculate_financial_metric,compare_periods,verify_citations,export_research_report",
+    "--no-extensions",
+    "--extension",
+    ".pi/extensions/financial-research/index.ts",
+    "-na",
+    "--no-skills",
+    "--no-prompt-templates"
+  ],
+  "pi_isolation_note": "Mandatory for every scripted Pi launch (smoke, eval runner): allowlist = exactly our 8 tools (no built-in bash/read/write/edit, so the model cannot read .env or ~/.pi/agent/auth.json); only the reviewed extension loads (-ne + explicit --extension); trust-gated project files ignored (-na); no skills/prompt templates. Launchers must refuse to start Pi if any of these is missing. ADR 0008 revision 2026-09-26."
+}
