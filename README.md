@@ -177,6 +177,17 @@ Counts are derived from the baseline's final verification reports; `n` is unsupp
 - A single pre-registered holdout run then confirmed the change.
 - **Caveats:** one run per arm; small holdout (9 strict numeric items, 1 refusal item); arm A ran at an earlier commit. This is limited evidence, not a broad performance guarantee.
 
+## Replay console
+
+[`web/`](web/) is a static front end that replays the three measurement runs exactly as recorded; nothing is regenerated and no model is called. For each of the 35 questions it shows the verified claims, the verifier's per-claim checklist, the cited passage, fact or calculation (a metric opens its formula and input facts), any rejected first attempt, and the full tool trace. A side-by-side view compares baseline (A) and render v2 (B), and a scoreboard repeats the tables above with their denominators.
+
+The data bundle is built only from committed artifacts. Every evidence record comes from a tool result the agent actually received during the run:
+
+```bash
+.venv/bin/python scripts/export_ui_data.py   # writes web/public/data/console.json
+cd web && npm install && npm run dev          # or: npm run build -> static web/dist/
+```
+
 ## Setup and run
 
 Use Python 3.11; `constraints.txt` was generated and verified on 3.11.16.

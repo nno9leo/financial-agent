@@ -30,3 +30,6 @@ data/models/
 :memory:*
 # generated research reports and drafts (local outputs)
 artifacts/reports/
+
+# Replay console build output (web/public/data is generated but committed so the site builds without Python)
+web/dist/

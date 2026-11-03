@@ -177,6 +177,17 @@ Counts are derived from the baseline's final verification reports; `n` is unsupp
 - 最后，一次预注册的 holdout 运行确认了这项改动。
 - **注意事项：** 每组只跑一次；holdout 很小（9 道严格数值题、1 道拒答题）；A 组在更早的 commit 上运行。这是有限的证据，不是普遍的性能保证。
 
+## 回放控制台
+
+[`web/`](web/) 是一个静态前端，按原始记录回放三次正式评测，不重新生成任何内容，也不调用模型。对 35 道题中的每一道，它会展示：通过校验的论断、每个论断的校验清单、被引用的原文段落、事实或计算结果（点开 metric 可以看到公式和输入事实）、被拒绝的第一次尝试，以及完整的工具调用轨迹。它还提供 baseline（A）和 render v2（B）的并排对比，以及一个带分母的成绩页。
+
+数据包只从已提交的评测产物生成。每条证据都来自智能体在运行时实际收到的工具结果：
+
+```bash
+.venv/bin/python scripts/export_ui_data.py   # 生成 web/public/data/console.json
+cd web && npm install && npm run dev          # 或 npm run build 生成静态 web/dist/
+```
+
 ## 安装与运行
 
 使用 Python 3.11；`constraints.txt` 在 3.11.16 上生成并验证过。
